@@ -1,0 +1,530 @@
+ <!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.javatpoint.com/EL-expression-in-jsp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 09:59:23 GMT -->
+<head><meta charset="utf-8"><title>JSP Expression Language | EL - javatpoint</title><link rel="SHORTCUT ICON" href="images/logo/icon.png" /><link rel="stylesheet" type="text/css" href="link.css" /><meta name="keywords" content="jsp, expression, el, language, tags, directives, tutorials, beginners, basics, questions, session, cookies, upload, download, examples"/><meta name="description" content="JSP Expression Language or EL with examples of session tracking, implicit objects, el, jstl, mvc, custom tags, file upload, file download, interview questions etc."/><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="canonical" href="EL-expression-in-jsp.html" />
+<meta itemprop="name" content="JSP Expression Language | EL - javatpoint"><meta itemprop="description" content="JSP Expression Language or EL with examples of session tracking, implicit objects, el, jstl, mvc, custom tags, file upload, file download, interview questions etc."><meta property="og:title" content="JSP Expression Language | EL - javatpoint" /><meta property="og:description" content="JSP Expression Language or EL with examples of session tracking, implicit objects, el, jstl, mvc, custom tags, file upload, file download, interview questions etc." />
+<meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta name="twitter:title" property="og:title" content="JSP Expression Language | EL - javatpoint" /><meta name="twitter:description" property="og:description" content="JSP Expression Language or EL with examples of session tracking, implicit objects, el, jstl, mvc, custom tags, file upload, file download, interview questions etc." /><meta property="og:url" content="EL-expression-in-jsp.html" /><meta property="og:site_name" content="www.javatpoint.com" /><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@pagejavatpoint"/><meta name="twitter:domain" content="www.javatpoint.com"/><meta name="twitter:creator" content="@pagejavatpoint"/></head> 
+<body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+<div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header"><!--<p style="font-weight:bold;padding:7px;color:white;background-color:gray;margin:0px"><marquee>JavaTpoint will be down for 2 to 4 hours tonight. Sorry for inconvenience.</marquee></p>-->
+
+<table style="width:100%"><tr><td><div id="headerlink" style="padding:0px;margin:0px"><span style="margin-right:20px;width:45%px"></span><span style="float:right;margin-right:5px;width:45%"> 
+
+</span>
+
+<hr class="upperhr"/>
+</div> </td></tr><tr><td>
+<div style="clear:both;float:left;width:230px;margin-left:20px"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"/></a></div>
+
+<div style="float:left;width:60%;"><form class="navbar-search" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form><!--<span style="margin-left:100px;color:orange;font-size:20px;font-weight:bold;">Happy </span><span style="color:red;font-size:20px;font-weight:bold;">New </span><span style="color:#666600;font-size:20px;font-weight:bold;">Year</span><span style="color:#666600;font-size:30px;font-weight:bold;"> 2015</span>--></div>
+
+</td></tr></table> </div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input type="image" src="images/menuhome64.png" onclick="showmenu()"/></span>
+<span style="float:left"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both"><form class="navbar-search-m" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2-m" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form></div></div>
+<div id="link" style="clear:both"> <div id="smoothmenu1" class="ddsmoothmenu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="java-tutorial.html">Core Java</a></li>
+<li><a href="servlet-tutorial.html">Servlet</a></li>
+<li><a href="jsp-tutorial.html"  class="selected">JSP</a></li>
+<li><a href="jstl.html">JSTL</a></li>
+<li><a href="struts-2-tutorial.html">Struts2</a></li>
+<li><a href="java-mail-api-tutorial.html">Mail API</a></li>
+<li><a href="hibernate-tutorial.html">Hibernate</a></li>
+<li><a href="spring-tutorial.html">Spring</a></li>
+<li><a href="android-tutorial.html">Android</a></li>
+<li><a href="design-patterns-in-java.html">Design Pattern</a></li>
+<li><a href="examaccess.html">Quiz</a></li>
+
+<li><a href="free-java-projects.html">Projects</a></li>
+<li><a href="corejava-interview-questions.html">Interview Q</a>
+<li><a href="comment.html">Comment</a>
+<li><a href="forum.html">Forum</a>
+</li>
+</ul>
+<br style="clear: left" />
+</div>
+
+</div><div class="mobilemenu" style="clear:both"> </div>
+
+<div id="menu"><div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">JSP Tutorial</span></h2>
+<a href="jsp-tutorial.html"><span>JSP Introduction</span></a>
+</div>
+<div class="leftmenu" >
+<a href="jsp-tutorial.html" class="l1">Life cycle of JSP</a>
+<a href="jsp-api.html" class="l1">JSP API</a>
+<a href="creating-jsp-in-eclipse-ide.html" class="l1">JSP in Eclipse</a>
+</div>
+
+<div class="leftmenu2" ><a href="jsp-scriptlet-tag.html"><span>JSP scripting elements</span></a></div>
+<div class="leftmenu" >
+<a href="jsp-scriptlet-tag.html" class="l1">JSP scriptlet tag</a>
+<a href="jsp-expression-tag.html" class="l1">JSP expression tag</a>
+<a href="jsp-declaration-tag.html" class="l1">JSP declaration tag</a>
+</div>
+
+<div class="leftmenu2"  ><a href="jsp-implicit-objects.html"><span>9 Implicit Objects</span></a></div>
+<div class="leftmenu" >
+<a href="request-implicit-object.html">JSP Request</a>
+<a href="response-implicit-object.html">JSP Response</a>
+<a href="config-implicit-object.html">JSP Config</a>
+<a href="application-implicit-object.html">JSP Application</a>
+<a href="session-implicit-object.html">JSP Session</a>
+<a href="pageContext-implicit-object.html">JSP PageContext</a>
+<a href="page-implicit-object.html">JSP Page</a>
+<a href="exception-implicit-object.html">JSP Exception</a>
+
+</div>
+<div class="leftmenu2" ><a href="jsp-page-directive.html"><span>JSP Directive Elements</span></a></div>
+<div class="leftmenu" >
+<a href="jsp-page-directive.html" class="l1">JSP page directive</a>
+<a href="jsp-include-directive.html" class="l1">JSP include directive</a>
+<a href="jsp-taglib-directive.html" class="l1">JSP taglib directive</a>
+</div>
+<div class="leftmenu2" ><a href="exception-handling-in-jsp.html"><span>JSP Exception</span></a></div>
+
+<div class="leftmenu2" ><a href="jsp-action-tags-forward-action.html"><span>Action Elements</span></a></div>
+<div class="leftmenu" >
+<a href="jsp-action-tags-forward-action.html" class="l1">jsp:forward</a>
+<a href="jsp-include-action.html" class="l1">jsp:include</a>
+<a href="java-bean.html" class="l1">Java Bean class</a>
+<a href="jsp-useBean-action.html" class="l1">jsp:useBean</a>
+<a href="jsp-setProperty-and-jsp-getProperty-action-tag.html" class="l1">set & getProperty</a>
+<a href="displaying-applet-in-jsp.html" class="l1">Displaying applet in JSP</a>
+</div>
+<div class="leftmenu2" ><a href="EL-expression-in-jsp.html"><span>Expression Language</span></a></div>
+<div class="leftmenu2" ><a href="MVC-in-jsp.html"><span>MVC in JSP</span></a></div>
+<div class="leftmenu2" ><a href="jstl.html"><span>JSTL</span></a></div>
+
+<div class="leftmenu2" ><a href="custom-tags.html"><span>JSP Custom tags</span></a></div>
+<div class="leftmenu" >
+<a href="example-of-jsp-custom-tag.html">Example of Custom Tag</a>
+<a href="attributes-in-jsp-custom-tag.html">Attributes</a>
+<a href="Iteration-using-jsp-custom-tag.html">Iteration</a>
+<a href="custom-uri-in-jsp-custom-tag.html">Custom URI</a>
+</div>
+<div class="leftmenu2" ><a href="pagination-in-jsp.html"><span>JSP Pagination</span></a></div>
+<div class="leftmenu" >
+<a href="pagination-in-jsp.html">JSP Pagination Example</a>
+</div>
+<div class="leftmenu2" ><a href="crud-in-jsp.html"><span>JSP CRUD</span></a></div>
+<div class="leftmenu" >
+<a href="crud-in-jsp.html">JSP CRUD Example</a>
+</div>
+<div class="leftmenu2" ><a href="registration-form-in-jsp.html"><span>Development in JSP</span></a></div>
+<div class="leftmenu" >
+<a href="registration-form-in-jsp.html" class="l1">Registration Form</a>
+<a href="login-form-in-jsp.html" class="l1">Login Form</a>
+<a href="uploading-file-to-the-server-in-jsp.html" class="l1">Uploading File</a>
+<a href="downloading-file-from-the-server-in-jsp.html" class="l1">Downloading File</a>
+<!--
+<a href="sending-email-using-jsp" class="l1">Sending Email</a>
+-->
+</div>
+
+<div class="leftmenu2">
+<a href="jspinterview.html"><span>Interview Questions</span></a>
+</div>
+<div class="leftmenu2">
+<a href="jsp-quiz.html"><span>JSP Quiz</span></a>
+</div>
+
+<table id="leftad"><tr><td><img src="images/wh.jpg" alt="space"/></td></tr><tr><td>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script> <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="4476401222"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</td></tr></table>
+
+</div><div class="onlycontent">
+
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- CM_JTP_Leaderbaord -->
+<ins class="adsbygoogle cm_jtp_leaderbaord"
+style="display:inline-block"
+data-ad-client="ca-pub-4699858549023382"
+data-ad-slot="9201901915"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div style="margin-left:0px;">
+<div id="city">
+<table >
+<tr><td>
+
+<div id="bottomnextup">
+
+<a class="next" href="MVC-in-jsp.html">next&gt;&gt;</a>
+
+<a class="next" href="displaying-applet-in-jsp.html">&lt;&lt;prev</a>
+
+</div>
+
+
+<h1 class="h1">Expression Language (EL) in JSP</h1>
+<div id="upr">
+<ol>
+<li><a href="#">Expression Language (EL) in JSP</a></li>
+<li><a href="#elimplicit">Implicit Objects in Expression Language</a></li>
+<li><a href="#elex1">Simple example of Expression Language that prints the name of the user</a></li>
+<li><a href="#elex2">Example of Expression Language that prints the value set in the session scope</a></li>
+<li><a href="#elprecedence">Precedence of Operators in EL</a></li>
+<li><a href="#elwords">Reserve words in EL</a></li>
+
+
+</ol>
+</div>
+
+
+<p>The <b>Expression Language</b> (EL) simplifies the accessibility of data stored in the Java Bean component, and other objects like request, session, application etc.</p>
+<p> There are many implicit objects, operators and reserve words in EL. </p>
+<p>It is the newly added feature in JSP technology version 2.0.</p>
+
+<br>
+<h3 class="h4">Syntax for Expression Language (EL) </h3>
+<div class="codeblock"><textarea name="code" class="java" >
+
+${ expression }
+
+</textarea></div>
+
+<a id="elimplicit"></a>
+<h3 class="h2">Implicit Objects in Expression Language (EL)</h3>
+
+<p>There are many implicit objects in the Expression Language. They are as follows:</p>
+<table class="alt">
+<tr><th>Implicit Objects</th><th>Usage</th></tr>
+<tr><td>pageScope</td><td>it maps the given attribute name with the value set in the page scope</td></tr>
+<tr><td>requestScope</td><td>it maps the given attribute name with the value set in the request scope</td></tr>
+<tr><td>sessionScope</td><td>it maps the given attribute name with the value set in the session scope</td></tr>
+<tr><td>applicationScope</td><td>it maps the given attribute name with the value set in the application scope</td></tr>
+<tr><td>param</td><td>it maps the request parameter to the single value</td></tr>
+<tr><td>paramValues</td><td>it maps the request parameter to an array of values</td></tr>
+<tr><td>header</td><td>it maps the request header name to the single value</td></tr>
+<tr><td>headerValues</td><td>it maps the request header name to an array of values</td></tr>
+<tr><td>cookie</td><td>it maps the given cookie name to the cookie value</td></tr>
+<tr><td>initParam</td><td>it maps the initialization parameter</td></tr>
+<tr><td>pageContext</td><td>it provides access to many objects request, session etc.</td></tr>
+</table>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- CM_JTP_WTC_Responsive -->
+<ins class="adsbygoogle cm_jtp_wtc_responsive"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4699858549023382"
+     data-ad-slot="6746133113"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<a id="elex1"></a>
+<h3 class="h3ex">EL param example</h3>
+<p>In this example, we have created two files index.jsp and process.jsp. The index.jsp file gets input from the user and sends the request to the process.jsp which in turn prints the name of the user using EL.</p>
+
+<h4 class="h4">index.jsp</h4>
+<div class="codeblock"><textarea name="code" class="java" >
+
+&lt;form action="process.jsp"&gt;
+Enter Name:&lt;input type="text" name="name" /&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;input type="submit" value="go"/&gt;
+&lt;/form&gt;
+
+</textarea></div>
+
+<h4 class="h4">process.jsp</h4>
+<div class="codeblock"><textarea name="code" class="java" >
+
+Welcome, ${ param.name }
+
+</textarea></div>
+
+<div class="download">
+<a href="src/jsp/el1.zip">download this example</a>
+</div>
+
+<hr/>
+<a id="elex2"></a>
+<h3 class="h3ex">EL sessionScope example </h3>
+<p>In this example, we printing the data stored in the session scope using EL. For this purpose, we have used sessionScope object.</p>
+
+<h4 class="h4">index.jsp</h4>
+<div class="codeblock"><textarea name="code" class="java" >
+
+&lt;h3&gt;welcome to index page&lt;/h3&gt;
+&lt;%
+session.setAttribute("user","sonoo");
+%&gt;
+
+&lt;a href="process.jsp"&gt;visit&lt;/a&gt;
+
+</textarea></div>
+
+<h4 class="h4">process.jsp</h4>
+<div class="codeblock"><textarea name="code" class="java" >
+
+Value is ${ sessionScope.user }
+
+</textarea></div>
+
+<div id="download">
+<a href="src/jsp/el2.zip">download this example</a>
+</div>
+<hr/>
+<h3 class="h3ex">EL cookie example</h3>
+<h4 class="h4">index.jsp</h4>
+<div class="codeblock"><textarea name="code" class="java" >
+<h1>First JSP</h1>
+<%
+Cookie ck=new Cookie("name","abhishek");
+response.addCookie(ck);
+%>
+<a href="process.html">click</a>
+</textarea></div>
+
+<h4 class="h4">process.jsp</h4>
+<div class="codeblock"><textarea name="code" class="java" >
+Hello, ${cookie.name.value}
+</textarea></div>
+<hr/>
+<a id="elprecedence"></a>
+<h3 class="h2">Precedence of Operators in EL</h3>
+
+<p>There are many operators that have been provided in the Expression Language. Their precedence are as follows:</p>
+<table class="alt">
+<tr><td>[] .</td></tr>
+<tr><td>()</td></tr>
+<tr><td>-(unary) not ! empty</td></tr>
+<tr><td>* / div % mod</td></tr>
+<tr><td>+ - (binary)</td></tr>
+<tr><td>< <= > >= lt le gt ge</td></tr>
+<tr><td>== != eq ne</td></tr>
+<tr><td>&& and </td></tr>
+<tr><td>|| or</td></tr>
+<tr><td>?:</td></tr>
+</table>
+
+<a id="elwords"></a>
+<h3 class="h2">Reserve words in EL</h3>
+<p>There are many reserve words in the Expression Language. They are as follows:</p>
+
+<table class="alt">
+<tr><td>lt</td><td>le</td><td>gt</td><td>ge</td></tr>
+<tr><td>eq</td><td>ne</td><td>true</td><td>false</td></tr>
+<tr><td>and</td><td>or</td><td>not</td><td>instanceof</td></tr>
+<tr><td>div</td><td>mod</td><td>empty</td><td>null</td></tr>
+</table>
+
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="MVC-in-jsp.html">MVC In Jsp</a></span>
+</div>
+
+<!-- link -->
+<br/><br/>
+<div id="bottomnext">
+
+<a style="float:left" class="next" href="displaying-applet-in-jsp.html">&lt;&lt;prev</a>
+<a style="float:right" class="next" href="MVC-in-jsp.html">next&gt;&gt;</a>
+
+
+</div>
+
+<br/><br/>
+
+<br/><br/><br/>
+</td></tr></table>
+</div>
+
+
+<h2 class="h2">Please Share</h2>
+<a rel="nofollow" title="Facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=https://www.javatpoint.com/EL-expression-in-jsp"><img src="images/facebook32.png" alt="facebook"/></a>
+<a rel="nofollow" title="Twitter" target="_blank" href="http://twitter.com/share?url=https://www.javatpoint.com/EL-expression-in-jsp&amp;text=JSP%20Expression%20Language%20|%20EL%20-%20javatpoint"><img src="images/twitter32.png" alt="twitter"/></a>
+<a rel="nofollow" title="Google+" target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=https://www.javatpoint.com/EL-expression-in-jsp"><img src="images/google-plus32.png" alt="google plus"/></a>
+<a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/EL-expression-in-jsp&amp;description=JSP%20Expression%20Language%20|%20EL%20-%20javatpoint"><img src="images/pinterest32.png" alt="pinterest"/></a>
+<a rel="nofollow" title="Tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=https://www.javatpoint.com/EL-expression-in-jsp"><img src="images/tumblr32.png" alt="tumbler"/></a>
+
+
+
+<!-- latest tutorials start -->
+<h2 class="h2">Latest 4 Tutorials</h2>
+<div class="firsthomecontent">
+
+<a href="mariadb-tutorial.html">
+<div class="homecontent">
+<img src="mariadb/images/mariadb-home.png" alt="MariaDB tutorial"/><span class="homespan">MariaDB</span>
+</div>
+</a>
+
+<a href="ado-net-tutorial.html">
+<div class="homecontent">
+<img src="ado/images/ado-net-home.jpg" alt="ADO.NET tutorial"/><span class="homespan">ADO.NET</span>
+</div>
+</a>
+
+<a href="asp-net-tutorial.html">
+<div class="homecontent">
+<img src="asp/images/asp-net-home.png" alt="ASP.NET tutorial"/><span class="homespan">ASP.NET</span>
+</div>
+</a>
+
+<a href="sql-server-tutorial.html">
+<div class="homecontent">
+<img src="sqlserver/images/sql-server-home.jpg" alt="SQL Server tutorial"/><span class="homespan">SQL Server</span>
+</div>
+</a>
+
+</div>
+
+</div>
+
+
+<br/><div class="mobilemenu" style="clear:both">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- responsivemobilefooter --><ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="8222866318"     data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<div id="right" style="width:15%;float:left;margin-left:10px;margin-top:10px;">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"     style="display:inline-block;width:160px;height:600px"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="3155368314"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script><br/><br/><br/>
+
+
+
+
+</div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"><script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- right1024only --><ins class="adsbygoogle" style="display:inline-block;width:120px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="2180118716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<br/><br/>
+</div>
+
+<div id="footer" style="clear:both;width:100%">
+
+<!--<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#90715c,#523b1f);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Summer Training</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers <strong>Summer Internship Training</strong> on Java, PHP, .Net, Hadoop, Data Analytics, R Programming, SAP, Android, Python, Oracle, Seleninum, Linux, C++ and many more technologies in Delhi/NCR, India. For more visit <a style="color:white" href="http://training.javatpoint.com"><img src="images/linkglobe12.png" alt="javatpoint training"/>training.javatpoint.com</a>
+    <br>
+    Course Fee: &#8377; 6000 Only<br>
+    Duration: 6 Week
+    </p>
+</div>
+-->
+<div style="width:100%;float:center;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Website Development Services</h2>
+    <p style="padding:0px 20px 0px 20px">JavaTpoint (SSS IT Pvt Ltd) provides website development services in affordable cost. We develop websites on WordPress, Core PHP, CakePHP, CodeIgnitor, Open Cart, Servlet-JSP, Struts 2 and Spring technologies. Send us your requirement at hr@javatpoint.com. We will show you a free demo first, then we will proceed further.
+    </p>
+    <table style="width:400px;padding:0px 20px 60px 20px">
+        <tr><td>Personal Blog</td><td>$150 Only</td></tr>
+        <tr><td>School Website</td><td>$200 Only</td></tr>
+        <tr><td>Company Website</td><td>$300 Only</td></tr>
+        <tr><td>Showroom Website</td><td>$300 Only</td></tr>
+        <tr><td>News Portal</td><td>$400 Only</td></tr>
+        <tr><td>E-Commerce Website</td><td>$500 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (PHP)</td><td>$3000 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (Java)</td><td>$18000 Approx</td></tr>
+        
+        <tr><td></td><td></td></tr>
+    </table>
+</div>
+<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at hr@javatpoint.com.
+    <br>
+    Course Fee: &#8377; 2000 Per Student<br>
+    </p>
+</div>
+
+<!--<div class="homebox2">
+<h2>Our Initiatives</h2>
+<marquee behavior="alternate">
+<a rel="nofollow" href="https://www.hindi100.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/javatpoint.png" alt="javatpoint"/>
+<p>Hindi100</p>
+</div>
+</a>
+
+<a rel="nofollow" href="https://www.lyricsia.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/lyrics.png" alt="lyrics"/>
+<p>Lyricsia</p>
+</div>
+</a>
+
+<a rel="nofollow" href="http://www.hindi-typing.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/hindi-typing.png" alt="hindi-typing"/>
+<p>Hindi-Typing</p>
+</div>
+</a>
+</marquee>
+</div>
+-->
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
+<div style="margin-top:5px;text-align:center">
+    <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup>
+    <a target="_blank" href="https://feeds.feedburner.com/javatpointsonoo"><img src="images/social/rss1.png" alt="RSS Feed"/></a>
+    <a target="_blank" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="images/social/mail1.png" alt="Subscribe to Get Email Alerts"/></a>
+    <a target="_blank" href="https://www.facebook.com/javatpoint"><img src="images/social/facebook1.jpg" alt="Facebook Page"/></a>
+    <a target="_blank" rel="author" href="https://plus.google.com/u/0/113973042385691981314/posts"><img src="images/social/google1.png" alt="Google Page"/></a>
+    <a target="_blank" href="https://twitter.com/pagejavatpoint"><img src="images/social/twitter1.png" alt="Twitter Page"/></a>
+    <a target="_blank" href="https://javatpoint.blogspot.com/"><img src="images/social/blog.png" alt="Blog Page"/></a>
+    <!--<a href="#" style="font:bold 18px arial;text-decoration:none;"><sup>&uarr;Top</sup></a>-->
+</div>
+
+<footer class="footer1">
+<div class="column4">
+<h3>Popular Topics</h3>
+<a href="java-tutorial.html">Java Tutorial</a>
+<a href="c-programming-language-tutorial.html">C Tutorial</a>
+<a href="cpp-tutorial.html">C++ Tutorial</a>
+<a href="c-sharp-tutorial.html">C# Tutorial</a>
+<a href="php-tutorial.html">PHP Tutorial</a>
+<a href="html-tutorial.html">HTML Tutorial</a>
+<a href="css-tutorial.html">CSS Tutorial</a>
+<a href="javascript-tutorial.html">JavaScript Tutorial</a>
+<a href="jquery-tutorial.html">jQuery Tutorial</a>
+<a href="spring-tutorial.html">Spring Tutorial</a>
+</div>
+<div class="column4">
+<h3>Our Websites</h3>
+<a rel="nofollow" target="_blank" href="index.html">Javatpoint.com</a>
+<a rel="nofollow" target="_blank" href="https://www.hindi100.com/">Hindi100.com</a>
+<a rel="nofollow" target="_blank" href="https://www.lyricsia.com/">Lyricsia.com</a>
+<a rel="nofollow" target="_blank" href="https://www.quoteperson.com/">Quoteperson.com</a>
+<a rel="nofollow" target="_blank" href="http://www.hindi-typing.com/">Hindi-typing.com</a>
+<a rel="nofollow" target="_blank" href="http://www.shayaree.com/">Shayaree.com</a>
+<a rel="nofollow" target="_blank" href="https://www.wordcountee.com/">Wordcountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.charactercountee.com/">Charactercountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.jobandplacement.com/">Jobandplacement.com</a>
+</div>
+<div class="column4">
+<h3>Our Services</h3>
+<p>Website Development</p>
+<p>Android Development</p>
+<p>Website Designing</p>
+<p>Digital Marketing</p>
+<p>Summer Training</p>
+<p>Industrial Training</p>
+<p>College Campus Training</p>
+</div>
+<div class="column4">
+<h3>Contact</h3>
+<p>Address: G-13, 2nd Floor, Sec-3</p>
+<p>Noida, UP, 201301, India</p>
+<p>Contact No: 0120-4256464, 9990449935</p>
+<p>Email: hr@javatpoint.com</p>
+<a href="contact-us.html">Contact Us</a> 
+<a href="subscribe.html">Subscribe Us</a> 
+<a href="privacy-policy.html">Privacy Policy</a>
+
+</div>
+</footer>
+
+<footer class="footer2">
+<p>&copy; Copyright 2011-2017 www.javatpoint.com. All rights reserved.  <a rel="nofollow" target="_blank" href="https://www.sssit.org/">Developed by SSS IT Pvt Ltd (JavaTpoint)</a> </p>
+</footer>
+
+
+</div></div></div>
+<script src="js/shcoreandbrush.js"></script><script type="text/javascript"> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+
+</body> 
+<!-- Mirrored from www.javatpoint.com/EL-expression-in-jsp by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 09:59:24 GMT -->
+</html> 

@@ -1,0 +1,435 @@
+ <!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.javatpoint.com/HttpServlet-class by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 09:57:43 GMT -->
+<head><meta charset="utf-8"><title>HttpServlet class in Servlet - javatpoint</title><link rel="SHORTCUT ICON" href="images/logo/icon.png" /><link rel="stylesheet" type="text/css" href="link.css" /><meta name="keywords" content="servlets, httpservlet, class java, tutorial, examples, http, client, server, session,cookies,upload,download"/><meta name="description" content=""/><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="canonical" href="HttpServlet-class.html" />
+<meta itemprop="name" content="HttpServlet class in Servlet - javatpoint"><meta itemprop="description" content=""><meta property="og:title" content="HttpServlet class in Servlet - javatpoint" /><meta property="og:description" content="" />
+<meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta name="twitter:title" property="og:title" content="HttpServlet class in Servlet - javatpoint" /><meta name="twitter:description" property="og:description" content="" /><meta property="og:url" content="HttpServlet-class.html" /><meta property="og:site_name" content="www.javatpoint.com" /><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@pagejavatpoint"/><meta name="twitter:domain" content="www.javatpoint.com"/><meta name="twitter:creator" content="@pagejavatpoint"/></head> 
+<body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+<div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header"><!--<p style="font-weight:bold;padding:7px;color:white;background-color:gray;margin:0px"><marquee>JavaTpoint will be down for 2 to 4 hours tonight. Sorry for inconvenience.</marquee></p>-->
+
+<table style="width:100%"><tr><td><div id="headerlink" style="padding:0px;margin:0px"><span style="margin-right:20px;width:45%px"></span><span style="float:right;margin-right:5px;width:45%"> 
+
+</span>
+
+<hr class="upperhr"/>
+</div> </td></tr><tr><td>
+<div style="clear:both;float:left;width:230px;margin-left:20px"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"/></a></div>
+
+<div style="float:left;width:60%;"><form class="navbar-search" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form><!--<span style="margin-left:100px;color:orange;font-size:20px;font-weight:bold;">Happy </span><span style="color:red;font-size:20px;font-weight:bold;">New </span><span style="color:#666600;font-size:20px;font-weight:bold;">Year</span><span style="color:#666600;font-size:30px;font-weight:bold;"> 2015</span>--></div>
+
+</td></tr></table> </div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input type="image" src="images/menuhome64.png" onclick="showmenu()"/></span>
+<span style="float:left"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both"><form class="navbar-search-m" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2-m" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form></div></div>
+<div id="link" style="clear:both"> <div id="smoothmenu1" class="ddsmoothmenu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="java-tutorial.html">Core Java</a></li>
+<li><a href="servlet-tutorial.html" class="selected">Servlet</a></li>
+<li><a href="jsp-tutorial.html">JSP</a></li>
+<li><a href="struts-2-tutorial.html">Struts2</a></li>
+
+<li><a href="java-mail-api-tutorial.html">Mail API</a></li>
+<li><a href="hibernate-tutorial.html">Hibernate</a></li>
+<li><a href="spring-tutorial.html">Spring</a></li>
+<li><a href="android-tutorial.html">Android</a></li>
+<li><a href="design-patterns-in-java.html">Design Pattern</a></li>
+<li><a href="examaccess.html">Quiz</a></li>
+
+<li><a href="free-java-projects.html">Projects</a></li>
+<li><a href="corejava-interview-questions.html">Interview Q</a>
+<li><a href="comment.html">Comment</a>
+<li><a href="forum.html">Forum</a>
+</li>
+</ul>
+<br style="clear: left" />
+</div>
+
+</div><div class="mobilemenu" style="clear:both"> </div>
+
+<div id="menu"><div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Servlet Tutorial</span></h2>
+</div>
+
+<div class="leftmenu">
+<a href="servlet-tutorial.html" >What is Servlet</a>
+<a href="web-terminology.html" >Web Terminology</a>
+<a href="servlet-api.html" >Servlet API</a>
+<a href="Servlet-interface.html" >Servlet Interface</a>
+<a href="GenericServlet-class.html" >GenericServlet</a>
+<a href="HttpServlet-class.html" >HttpServlet</a>
+<a href="life-cycle-of-a-servlet.html" >Servlet Life Cycle</a>
+<a href="steps-to-create-a-servlet-using-tomcat-server.html" >Servlet Example</a>
+<a href="how-servlet-works.html">How servlet works?</a>
+<a href="war-file.html" >War File</a>
+<a href="welcome-file-list.html" >welcome-file-list</a>
+<a href="load-on-startup.html" >Load on startup</a>
+</div>
+<div class="leftmenu2"  >
+<a href="creating-servlet-in-eclipse-ide.html"><span>Servlet with IDE</span></a>
+</div>
+<div class="leftmenu">
+<a href="creating-servlet-in-eclipse-ide.html" >servlet in Eclipse</a>
+<a href="creating-servlet-in-myeclipse-ide.html" >servlet in Myeclipse</a>
+<a href="creating-servlet-in-netbeans-ide.html" >servlet in Netbeans</a>
+</div>
+
+<div class="leftmenu2"  ><a href="servletrequest.html"><span>ServletRequest</span></a></div>
+<div class="leftmenu2"  ><a href="requestdispatcher-in-servlet.html"><span>Servlet Collaboration</span></a></div>
+<div class="leftmenu">
+<a href="requestdispatcher-in-servlet.html" >RequestDispacher</a>
+<a href="sendRedirect()-method.html" >sendRedirect</a>
+</div>
+
+<div class="leftmenu2"  ><a href="servletconfig.html"><span>ServletConfig</span></a></div>
+<div class="leftmenu2"  ><a href="servletcontext.html"><span>ServletContext</span></a></div>
+<div class="leftmenu2"  ><a href="attribute.html"><span>Attribute in Servlet</span></a></div>
+
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Servlet Advance</span></h2>
+<a href="session-tracking-in-servlets.html"><span>Session Tracking</span></a>
+</div>
+<div class="leftmenu">
+<a href="session-tracking-in-servlets.html" >Session Techniques</a>
+<a href="cookies-in-servlet.html" >1) Cookies in Servlet</a>
+<a href="servlet-login-and-logout-example-using-cookies.html" >Cookies: Login & Logout</a>
+<a href="hidden-form-field-in-session-tracking.html" >2) Hidden Form Field</a>
+<a href="url-rewriting-in-session-tracking.html" >3) URL Rewriting</a>
+<a href="http-session-in-session-tracking.html" >4) HttpSession</a>
+<a href="servlet-http-session-login-and-logout-example.html" >Session: Login & Logout</a>
+</div>
+
+<div class="leftmenu2"  ><a href="Event-and-Listener-in-Servlet.html"><span>Event and Listener</span></a></div>
+<div class="leftmenu2"  ><a href="servlet-filter.html"><span>Servlet Filter</span></a></div>
+<div class="leftmenu">
+<a href="servlet-filter.html" >What is Filter</a>
+<a href="authentication-filter.html" >Authentication Filter</a>
+<a href="filter-config.html" >FilterConfig</a>
+<a href="filter2.html" >Useful examples</a>
+</div>
+<div class="leftmenu2"  ><a href="crud-in-servlet.html"><span>Servlet CRUD</span></a></div>
+<div class="leftmenu">
+<a href="crud-in-servlet.html" >CRUD Example</a>
+</div>
+<div class="leftmenu2"  ><a href="pagination-in-servlet.html"><span>Servlet Pagination</span></a></div>
+<div class="leftmenu">
+<a href="pagination-in-servlet.html" >Pagination Example</a>
+</div>
+<div class="leftmenu2"  ><a href="ServletInputStream-class.html"><span>Servlet Miscellaneous</span></a></div>
+<div class="leftmenu">
+<a href="ServletInputStream-class.html"><span>ServletInputStream</span></a>
+<a href="ServletOutputStream-class.html"><span>ServletOutputStream</span></a>
+<a href="servlet-with-annotation.html"><span>Annotation Servlet </span></a>
+<a href="SingleThreadModel-interface.html"><span>SingleThreadModel</span></a>
+<a href="server-side-include.html"><span>SSI </span></a>
+</div>
+
+<div class="leftmenu2"  ><a href="example-of-registration-form-in-servlet.html"><span>Development</span></a></div>
+
+<div class="leftmenu">
+<a href="example-of-registration-form-in-servlet.html" class="l1">Registration Example</a>
+<a href="example-of-fetching-result-for-the-given-rollno-in-servlet.html" class="l1">Fetching records</a>
+<a href="improving-servlet-performance-to-fetch-records.html" class="l1">Improving Performance</a>
+<a href="example-of-uploading-file-to-the-server-in-servlet.html" class="l1">Uploading file</a>
+<a href="example-of-downloading-file-from-the-server-in-servlet.html" class="l1">Downloading file</a>
+<a href="sending-email-through-java-mail-api-in-servlet.html" class="l1">Servlet Sending Email</a>
+<a href="how-to-write-data-into-PDF-using-servlet.html" class="l1">Write data to PDF</a>
+<a href="example-of-login-form-in-servlet.html" class="l1">Login Example</a>
+<a href="example-to-display-image-using-servlet.html" class="l1">Writing Image</a>
+
+</div>
+
+
+<div class="leftmenu2"  >
+<a href="servlet-quiz.html"><span>Servlet Quiz</span></a>
+</div>
+
+<div class="leftmenu" >
+<a href="directload75d2.html?val=12">Servlet Quiz(Part-1)</a>
+<a href="directloade5bc.html?val=16">Servlet Quiz(Part-2)</a>
+<a href="directloadf707.html?val=28">Servlet Quiz(Part-3)</a>
+
+</div>
+<div class="leftmenu2">
+<a href="servletinterview.html"><span>Interview Questions</span></a>
+</div>
+
+<table id="leftad"><tr><td><img src="images/wh.jpg" alt="space"/></td></tr><tr><td>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script> <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="4476401222"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</td></tr></table>
+
+</div><div class="onlycontent">
+
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- CM_JTP_Leaderbaord -->
+<ins class="adsbygoogle cm_jtp_leaderbaord"
+style="display:inline-block"
+data-ad-client="ca-pub-4699858549023382"
+data-ad-slot="9201901915"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div style="margin-left:0px;">
+<div id="city">
+<table>
+<tr><td>
+
+<div id="bottomnextup">
+<a class="next" href="life-cycle-of-a-servlet.html">next &rarr;</a>
+<a class="next" href="GenericServlet-class.html"> &larr; prev</a>
+</div>
+
+<h1 class="h1">HttpServlet class</h1>
+
+<div id="upr">
+<ol>
+<li><a href="#">HttpServlet class</a></li>
+<li><a href="#httpservletmethods">Methods of HttpServlet class</a></li>
+</ol>
+</div>
+
+<table >
+<tr><td>The HttpServlet class extends the GenericServlet class and implements Serializable interface. It provides http specific methods such as doGet, doPost, doHead, doTrace etc.</td></tr>
+</table>
+
+<a id="httpservletmethods"></a>
+<h3 class="h3">Methods of HttpServlet class</h3>
+<p>There are many methods in HttpServlet class. They are as follows:</p>
+<ol class="points">
+<li><strong>public void service(ServletRequest req,ServletResponse res)</strong> dispatches the request to the protected service method by converting the request and response object into http type.</li>
+<li><strong>protected void service(HttpServletRequest req, HttpServletResponse res)</strong> receives the request from the service method, and dispatches the request to the doXXX() method depending on the incoming http request type.</li>
+<li><strong>protected void doGet(HttpServletRequest req, HttpServletResponse res)</strong> handles the GET request. It is invoked by the web container.</li>
+<li><strong>protected void doPost(HttpServletRequest req, HttpServletResponse res)</strong> handles the POST request. It is invoked by the web container.</li>
+<li><strong>protected void doHead(HttpServletRequest req, HttpServletResponse res)</strong> handles the HEAD request. It is invoked by the web container.</li>
+<li><strong>protected void doOptions(HttpServletRequest req, HttpServletResponse res)</strong> handles the OPTIONS request. It is invoked by the web container.</li>
+<li><strong>protected void doPut(HttpServletRequest req, HttpServletResponse res)</strong> handles the PUT request. It is invoked by the web container.</li>
+<li><strong>protected void doTrace(HttpServletRequest req, HttpServletResponse res)</strong> handles the TRACE request. It is invoked by the web container.</li>
+<li><strong>protected void doDelete(HttpServletRequest req, HttpServletResponse res)</strong> handles the DELETE request. It is invoked by the web container.</li>
+<li><strong>protected long getLastModified(HttpServletRequest req)</strong> returns the time when HttpServletRequest was last modified since midnight January 1, 1970 GMT.</li>
+</ol>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- CM_JTP_WTC_Responsive -->
+<ins class="adsbygoogle cm_jtp_wtc_responsive"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4699858549023382"
+     data-ad-slot="6746133113"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="life-cycle-of-a-servlet.html">Life Cycle Of A Servlet</a></span>
+</div>
+
+
+<!-- link -->
+<br/><br/>
+<div id="bottomnext">
+<a style="float:left" class="next" href="GenericServlet-class.html"> &larr; prev</a>
+<a style="float:right" class="next" href="life-cycle-of-a-servlet.html">next &rarr;</a>
+</div>
+
+<br/><br/>
+
+</td></tr></table>
+</div>
+
+
+<h2 class="h2">Please Share</h2>
+<a rel="nofollow" title="Facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=https://www.javatpoint.com/HttpServlet-class"><img src="images/facebook32.png" alt="facebook"/></a>
+<a rel="nofollow" title="Twitter" target="_blank" href="http://twitter.com/share?url=https://www.javatpoint.com/HttpServlet-class&amp;text=HttpServlet%20class%20in%20Servlet%20-%20javatpoint"><img src="images/twitter32.png" alt="twitter"/></a>
+<a rel="nofollow" title="Google+" target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=https://www.javatpoint.com/HttpServlet-class"><img src="images/google-plus32.png" alt="google plus"/></a>
+<a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/HttpServlet-class&amp;description=HttpServlet%20class%20in%20Servlet%20-%20javatpoint"><img src="images/pinterest32.png" alt="pinterest"/></a>
+<a rel="nofollow" title="Tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=https://www.javatpoint.com/HttpServlet-class"><img src="images/tumblr32.png" alt="tumbler"/></a>
+
+
+
+<!-- latest tutorials start -->
+<h2 class="h2">Latest 4 Tutorials</h2>
+<div class="firsthomecontent">
+
+<a href="mariadb-tutorial.html">
+<div class="homecontent">
+<img src="mariadb/images/mariadb-home.png" alt="MariaDB tutorial"/><span class="homespan">MariaDB</span>
+</div>
+</a>
+
+<a href="ado-net-tutorial.html">
+<div class="homecontent">
+<img src="ado/images/ado-net-home.jpg" alt="ADO.NET tutorial"/><span class="homespan">ADO.NET</span>
+</div>
+</a>
+
+<a href="asp-net-tutorial.html">
+<div class="homecontent">
+<img src="asp/images/asp-net-home.png" alt="ASP.NET tutorial"/><span class="homespan">ASP.NET</span>
+</div>
+</a>
+
+<a href="sql-server-tutorial.html">
+<div class="homecontent">
+<img src="sqlserver/images/sql-server-home.jpg" alt="SQL Server tutorial"/><span class="homespan">SQL Server</span>
+</div>
+</a>
+
+</div>
+
+</div>
+
+
+<br/><div class="mobilemenu" style="clear:both">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- responsivemobilefooter --><ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="8222866318"     data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<div id="right" style="width:15%;float:left;margin-left:10px;margin-top:10px;">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"     style="display:inline-block;width:160px;height:600px"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="3155368314"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script><br/><br/><br/>
+
+
+
+
+</div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"><script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- right1024only --><ins class="adsbygoogle" style="display:inline-block;width:120px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="2180118716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<br/><br/>
+</div>
+
+<div id="footer" style="clear:both;width:100%">
+
+<!--<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#90715c,#523b1f);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Summer Training</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers <strong>Summer Internship Training</strong> on Java, PHP, .Net, Hadoop, Data Analytics, R Programming, SAP, Android, Python, Oracle, Seleninum, Linux, C++ and many more technologies in Delhi/NCR, India. For more visit <a style="color:white" href="http://training.javatpoint.com"><img src="images/linkglobe12.png" alt="javatpoint training"/>training.javatpoint.com</a>
+    <br>
+    Course Fee: &#8377; 6000 Only<br>
+    Duration: 6 Week
+    </p>
+</div>
+-->
+<div style="width:100%;float:center;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Website Development Services</h2>
+    <p style="padding:0px 20px 0px 20px">JavaTpoint (SSS IT Pvt Ltd) provides website development services in affordable cost. We develop websites on WordPress, Core PHP, CakePHP, CodeIgnitor, Open Cart, Servlet-JSP, Struts 2 and Spring technologies. Send us your requirement at hr@javatpoint.com. We will show you a free demo first, then we will proceed further.
+    </p>
+    <table style="width:400px;padding:0px 20px 60px 20px">
+        <tr><td>Personal Blog</td><td>$150 Only</td></tr>
+        <tr><td>School Website</td><td>$200 Only</td></tr>
+        <tr><td>Company Website</td><td>$300 Only</td></tr>
+        <tr><td>Showroom Website</td><td>$300 Only</td></tr>
+        <tr><td>News Portal</td><td>$400 Only</td></tr>
+        <tr><td>E-Commerce Website</td><td>$500 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (PHP)</td><td>$3000 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (Java)</td><td>$18000 Approx</td></tr>
+        
+        <tr><td></td><td></td></tr>
+    </table>
+</div>
+<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at hr@javatpoint.com.
+    <br>
+    Course Fee: &#8377; 2000 Per Student<br>
+    </p>
+</div>
+
+<!--<div class="homebox2">
+<h2>Our Initiatives</h2>
+<marquee behavior="alternate">
+<a rel="nofollow" href="https://www.hindi100.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/javatpoint.png" alt="javatpoint"/>
+<p>Hindi100</p>
+</div>
+</a>
+
+<a rel="nofollow" href="https://www.lyricsia.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/lyrics.png" alt="lyrics"/>
+<p>Lyricsia</p>
+</div>
+</a>
+
+<a rel="nofollow" href="http://www.hindi-typing.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/hindi-typing.png" alt="hindi-typing"/>
+<p>Hindi-Typing</p>
+</div>
+</a>
+</marquee>
+</div>
+-->
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
+<div style="margin-top:5px;text-align:center">
+    <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup>
+    <a target="_blank" href="https://feeds.feedburner.com/javatpointsonoo"><img src="images/social/rss1.png" alt="RSS Feed"/></a>
+    <a target="_blank" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="images/social/mail1.png" alt="Subscribe to Get Email Alerts"/></a>
+    <a target="_blank" href="https://www.facebook.com/javatpoint"><img src="images/social/facebook1.jpg" alt="Facebook Page"/></a>
+    <a target="_blank" rel="author" href="https://plus.google.com/u/0/113973042385691981314/posts"><img src="images/social/google1.png" alt="Google Page"/></a>
+    <a target="_blank" href="https://twitter.com/pagejavatpoint"><img src="images/social/twitter1.png" alt="Twitter Page"/></a>
+    <a target="_blank" href="https://javatpoint.blogspot.com/"><img src="images/social/blog.png" alt="Blog Page"/></a>
+    <!--<a href="#" style="font:bold 18px arial;text-decoration:none;"><sup>&uarr;Top</sup></a>-->
+</div>
+
+<footer class="footer1">
+<div class="column4">
+<h3>Popular Topics</h3>
+<a href="java-tutorial.html">Java Tutorial</a>
+<a href="c-programming-language-tutorial.html">C Tutorial</a>
+<a href="cpp-tutorial.html">C++ Tutorial</a>
+<a href="c-sharp-tutorial.html">C# Tutorial</a>
+<a href="php-tutorial.html">PHP Tutorial</a>
+<a href="html-tutorial.html">HTML Tutorial</a>
+<a href="css-tutorial.html">CSS Tutorial</a>
+<a href="javascript-tutorial.html">JavaScript Tutorial</a>
+<a href="jquery-tutorial.html">jQuery Tutorial</a>
+<a href="spring-tutorial.html">Spring Tutorial</a>
+</div>
+<div class="column4">
+<h3>Our Websites</h3>
+<a rel="nofollow" target="_blank" href="index.html">Javatpoint.com</a>
+<a rel="nofollow" target="_blank" href="https://www.hindi100.com/">Hindi100.com</a>
+<a rel="nofollow" target="_blank" href="https://www.lyricsia.com/">Lyricsia.com</a>
+<a rel="nofollow" target="_blank" href="https://www.quoteperson.com/">Quoteperson.com</a>
+<a rel="nofollow" target="_blank" href="http://www.hindi-typing.com/">Hindi-typing.com</a>
+<a rel="nofollow" target="_blank" href="http://www.shayaree.com/">Shayaree.com</a>
+<a rel="nofollow" target="_blank" href="https://www.wordcountee.com/">Wordcountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.charactercountee.com/">Charactercountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.jobandplacement.com/">Jobandplacement.com</a>
+</div>
+<div class="column4">
+<h3>Our Services</h3>
+<p>Website Development</p>
+<p>Android Development</p>
+<p>Website Designing</p>
+<p>Digital Marketing</p>
+<p>Summer Training</p>
+<p>Industrial Training</p>
+<p>College Campus Training</p>
+</div>
+<div class="column4">
+<h3>Contact</h3>
+<p>Address: G-13, 2nd Floor, Sec-3</p>
+<p>Noida, UP, 201301, India</p>
+<p>Contact No: 0120-4256464, 9990449935</p>
+<p>Email: hr@javatpoint.com</p>
+<a href="contact-us.html">Contact Us</a> 
+<a href="subscribe.html">Subscribe Us</a> 
+<a href="privacy-policy.html">Privacy Policy</a>
+
+</div>
+</footer>
+
+<footer class="footer2">
+<p>&copy; Copyright 2011-2017 www.javatpoint.com. All rights reserved.  <a rel="nofollow" target="_blank" href="https://www.sssit.org/">Developed by SSS IT Pvt Ltd (JavaTpoint)</a> </p>
+</footer>
+
+
+</div></div></div>
+<script src="js/shcoreandbrush.js"></script><script type="text/javascript"> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+
+</body> 
+<!-- Mirrored from www.javatpoint.com/HttpServlet-class by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 09:57:43 GMT -->
+</html> 

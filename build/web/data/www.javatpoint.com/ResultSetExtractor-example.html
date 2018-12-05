@@ -1,0 +1,597 @@
+ <!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.javatpoint.com/ResultSetExtractor-example by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 10:06:48 GMT -->
+<head><meta charset="utf-8"><title>Spring ResultSetExtractor Example - javatpoint</title><link rel="SHORTCUT ICON" href="images/logo/icon.png" /><link rel="stylesheet" type="text/css" href="link.css" /><meta name="keywords" content=""/><meta name="description" content="Spring ResultSetExtractor Example with examples, spring aop tutorial, spring dependency injection, spring mvc tutorial, spring jdbctemplate, spring hibernate, spring data jpa, spring remoting"/><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="canonical" href="ResultSetExtractor-example.html" />
+<meta itemprop="name" content="Spring ResultSetExtractor Example - javatpoint"><meta itemprop="description" content="Spring ResultSetExtractor Example with examples, spring aop tutorial, spring dependency injection, spring mvc tutorial, spring jdbctemplate, spring hibernate, spring data jpa, spring remoting"><meta property="og:title" content="Spring ResultSetExtractor Example - javatpoint" /><meta property="og:description" content="Spring ResultSetExtractor Example with examples, spring aop tutorial, spring dependency injection, spring mvc tutorial, spring jdbctemplate, spring hibernate, spring data jpa, spring remoting" />
+<meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta name="twitter:title" property="og:title" content="Spring ResultSetExtractor Example - javatpoint" /><meta name="twitter:description" property="og:description" content="Spring ResultSetExtractor Example with examples, spring aop tutorial, spring dependency injection, spring mvc tutorial, spring jdbctemplate, spring hibernate, spring data jpa, spring remoting" /><meta property="og:url" content="ResultSetExtractor-example.html" /><meta property="og:site_name" content="www.javatpoint.com" /><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@pagejavatpoint"/><meta name="twitter:domain" content="www.javatpoint.com"/><meta name="twitter:creator" content="@pagejavatpoint"/></head> 
+<body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+<div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header"><!--<p style="font-weight:bold;padding:7px;color:white;background-color:gray;margin:0px"><marquee>JavaTpoint will be down for 2 to 4 hours tonight. Sorry for inconvenience.</marquee></p>-->
+
+<table style="width:100%"><tr><td><div id="headerlink" style="padding:0px;margin:0px"><span style="margin-right:20px;width:45%px"></span><span style="float:right;margin-right:5px;width:45%"> 
+
+</span>
+
+<hr class="upperhr"/>
+</div> </td></tr><tr><td>
+<div style="clear:both;float:left;width:230px;margin-left:20px"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"/></a></div>
+
+<div style="float:left;width:60%;"><form class="navbar-search" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form><!--<span style="margin-left:100px;color:orange;font-size:20px;font-weight:bold;">Happy </span><span style="color:red;font-size:20px;font-weight:bold;">New </span><span style="color:#666600;font-size:20px;font-weight:bold;">Year</span><span style="color:#666600;font-size:30px;font-weight:bold;"> 2015</span>--></div>
+
+</td></tr></table> </div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input type="image" src="images/menuhome64.png" onclick="showmenu()"/></span>
+<span style="float:left"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both"><form class="navbar-search-m" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2-m" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form></div></div>
+<div id="link" style="clear:both"> <div id="smoothmenu1" class="ddsmoothmenu">
+<ul>
+<li><a href="index.html" >Home</a></li>
+<li><a href="java-tutorial.html">Core Java</a></li>
+<li><a href="servlet-tutorial.html">Servlet</a></li>
+<li><a href="jsp-tutorial.html">JSP</a></li>
+<li><a href="struts-2-tutorial.html">Struts2</a></li>
+
+<li><a href="java-mail-api-tutorial.html">Mail API</a></li>
+<li><a href="hibernate-tutorial.html">Hibernate</a></li>
+<li><a href="spring-tutorial.html"  class="selected">Spring</a></li>
+<li><a href="android-tutorial.html">Android</a></li>
+<li><a href="design-patterns-in-java.html">Design Pattern</a></li>
+<li><a href="examaccess.html">Quiz</a></li>
+
+<li><a href="free-java-projects.html">Projects</a></li>
+<li><a href="corejava-interview-questions.html">Interview Q</a>
+<li><a href="comment.html">Comment</a>
+<li><a href="forum.html">Forum</a>
+</li>
+</ul>
+<br style="clear: left" />
+</div>
+
+</div><div class="mobilemenu" style="clear:both"> </div>
+
+<div id="menu"><div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Spring Tutorial</span></h2>
+</div>
+
+<div class="leftmenu">
+<a href="spring-tutorial.html" >What is Spring</a>
+<a href="spring-modules.html" >Spring Modules</a>
+<a href="steps-to-create-spring-application.html" >Spring Application</a>
+</div>
+
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Spring in IDE</span></h2>
+</div>
+<div class="leftmenu">
+<a href="example-of-spring-application-in-myeclipse.html" >Spring  in Myeclipse</a>
+<a href="example-of-spring-application-in-eclipse.html" >Spring  in Eclipse</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Dependency Injection</span></h2>
+</div>
+<div class="leftmenu">
+<a href="ioc-container.html"><span>IOC container</span></a>
+<a href="dependency-injection-in-spring.html"><span>Dependency Injection</span></a>
+<a href="spring-tutorial-dependency-injection-by-constructor.html" >Constructor Injection</a>
+<a href="spring-tutorial-constructor-injection-with-dependent-object.html" >CI Dependent Object</a>
+<a href="spring-tutorial-constructor-injection-with-collection.html" >CI with collection</a>
+<a href="spring-tutorial-constructor-injection-with-non-string-collection.html" >CI with collection 2</a>
+<a href="spring-tutorial-constructor-injection-with-map.html" >CI with Map</a>
+<a href="spring-tutorial-constructor-injection-with-non-string-map.html" >CI with Map2</a>
+<a href="spring-tutorial-inheriting-bean-in-spring.html" >CI Inheriting Bean</a>
+<a href="spring-tutorial-dependency-injection-by-setter-method.html" >Setter Injection</a>
+<a href="spring-tutorial-setter-injection-with-dependent-object.html" >SI Dependent Object</a>
+<a href="spring-tutorial-setter-injection-with-collection.html" >SI with Collection</a>
+<a href="spring-tutorial-setter-injection-with-non-string-collection.html" >SI with Collection 2</a>
+<a href="spring-tutorial-setter-injection-with-map.html" >SI with Map</a>
+<a href="spring-tutorial-setter-injection-with-non-string-map.html" >SI with Map 2</a>
+<a href="difference-between-constructor-and-setter-injection.html" >CI vs SI</a>
+<a href="autowiring-in-spring.html" >Autowiring</a>
+<a href="dependency-injection-with-factory-method.html" >Factory Method</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Spring AOP</span></h2>
+</div>
+<div class="leftmenu">
+<a href="spring-aop-tutorial.html" >AOP Concepts</a>
+<a href="spring-aop-example.html" >Spring1.2 AOP DTD</a>
+<a href="spring-aop-aspectj-annotation-example.html" >SP AspectJ Annotation</a>
+<a href="spring-aop-aspectj-xml-configuration-example.html" >SP AspectJ XML</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Spring JdbcTemplate</span></h2>
+</div>
+<div class="leftmenu">
+<a href="spring-JdbcTemplate-tutorial.html" >JdbcTemplate Example</a>
+<a href="example-of-PreparedStatement-in-Spring-JdbcTemplate.html" >PreparedStatement</a>
+<a href="ResultSetExtractor-example.html" >ResultSetExtractor</a>
+<a href="RowMapper-example.html" >RowMapper</a>
+<a href="spring-NamedParameterJdbcTemplate-example.html" >NamedParameter</a>
+<a href="spring-SimpleJdbcTemplate-example.html" >SimpleJdbcTemplate</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Spring ORM</span></h2>
+</div>
+<div class="leftmenu">
+<a href="spring-with-orm-frameworks.html"><span>Spring with ORM</span></a>
+<a href="hibernate-and-spring-integration.html" >Spring with Hibernate</a>
+<a href="spring-and-jpa-integration.html" >Spring with JPA</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">SPEL</span></h2>
+</div>
+<div class="leftmenu">
+<a href="spring-expression-language-tutorial.html" >SpEL Examples</a>
+<a href="operators-in-spel.html" >Operators in SpEL</a>
+<a href="using-variable-in-spel.html" >variable in SpEL</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Spring MVC</span></h2>
+</div>
+<div class="leftmenu"  >
+<a href="spring-3-mvc-tutorial.html"><span>Spring MVC</span></a>
+<a href="spring-3-mvc-tutorial.html#multiple"><span>Multiple Controller</span></a>
+<a href="spring-3-mvc-tutorial.html#login"><span>Request Response</span></a>
+<a href="spring-mvc-form-example.html"><span>MVC Form Example</span></a>
+<a href="spring-mvc-crud-example.html"><span>MVC CRUD Example</span></a>
+<a href="spring-mvc-pagination-example.html"><span>MVC Pagination Example</span></a>
+<a href="spring-mvc-file-upload.html"><span>MVC File Upload</span></a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Spring MVC Tiles</span></h2>
+</div>
+<div class="leftmenu"  >
+<a href="spring-mvc-tiles-example.html"><span>Spring MVC Tiles</span></a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Spring Remoting</span></h2>
+</div>
+<div class="leftmenu">
+<a href="remoting-in-spring-framework.html"><span>Remoting with Spring</span></a>
+<a href="spring-and-rmi-integration.html" >Spring with RMI</a>
+<a href="spring-remoting-by-http-invoker-example.html" >Http Invoker</a>
+<a href="spring-remoting-by-hessian-example.html" >Hessian</a>
+<a href="spring-remoting-by-burlap-example.html" >Burlap</a>
+<a href="spring-and-jms-integration.html" >Spring with JMS</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Spring OXM</span></h2>
+</div>
+<div class="leftmenu">
+<a href="spring-and-jaxb-integration-example.html" >Spring with JAXB</a>
+<a href="spring-with-xstream-example.html" >Spring with Xstream</a>
+<a href="spring-with-castor-example.html" >Spring with Castor</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Spring Java Mail</span></h2>
+</div>
+<div class="leftmenu"  >
+<a href="spring-java-mail-tutorial.html"><span>Spring Java Mail</span></a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Spring Web</span></h2>
+</div>
+<div class="leftmenu">
+<a href="spring-and-struts2-integration.html" >Spring with Struts2</a>
+<a href="login-example-with-struts-2-and-spring-integration.html" >Login Example</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Spring Boot</span></h2>
+</div>
+<div class="leftmenu">
+<a href="spring-boot-tutorial.html" >Spring Boot (15+)</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Spring Interview</span></h2>
+</div>
+<div class="leftmenu"  >
+<a href="spring-interview-questions.html"><span>Interview Questions</span></a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Spring Quiz</span></h2>
+</div>
+<div class="leftmenu"  >
+<a href="spring-quiz.html"><span>Spring Quiz</span></a>
+</div>
+
+<table id="leftad"><tr><td><img src="images/wh.jpg" alt="space"/></td></tr><tr><td>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script> <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="4476401222"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</td></tr></table>
+
+</div><div class="onlycontent">
+
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- CM_JTP_Leaderbaord -->
+<ins class="adsbygoogle cm_jtp_leaderbaord"
+style="display:inline-block"
+data-ad-client="ca-pub-4699858549023382"
+data-ad-slot="9201901915"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div style="margin-left:0px;">
+<div id="city">
+
+<table>
+<tr><td>
+<div id="bottomnextup">
+
+<a class="next" href="RowMapper-example.html">next&gt;&gt;</a>
+
+<a class="next" href="example-of-PreparedStatement-in-Spring-JdbcTemplate.html">&lt;&lt;prev</a>
+
+</div>
+
+<h1 class="h1">ResultSetExtractor Example | Fetching Records by Spring JdbcTemplate</h1>
+<div id="upr">
+<ol>
+<li><a href="#">ResultSetExtractor Example</a></li>
+<li><a href="#">ResultSetExtractor Interface</a></li>
+<li><a href="#">Method of ResultSetExtractor Interface</a></li>
+<li><a href="#">Example of ResultSetExtractor</a></li>
+</ol>
+</div>
+
+<p>We can easily fetch the records from the database using <b>query()</b> method of <b>JdbcTemplate</b> class where we need to pass the instance of ResultSetExtractor.</p>
+<h4 class="h4">Syntax of query method using ResultSetExtractor</h4>
+<div class="codeblock"><textarea name="code" class="java" >
+public T query(String sql,ResultSetExtractor<T> rse)
+</textarea></div>
+
+<h3 class="h3">ResultSetExtractor Interface</h3>
+<p><b>ResultSetExtractor</b> interface can be used to fetch records from the database. It accepts a ResultSet and returns the list.</p>
+<h4 class="h4">Method of ResultSetExtractor interface</h4>
+<p>It defines only one method extractData that accepts ResultSet instance as a parameter. Syntax of the method is given below:
+<div class="codeblock"><textarea name="code" class="java" >
+public T extractData(ResultSet rs)throws SQLException,DataAccessException
+</textarea></div>
+
+<hr/>
+<h3 class="h3ex">Example of ResultSetExtractor Interface to show all the records of the table</h3>
+<p>We are assuming that you have created the following table inside the Oracle10g database.</p>
+<div class="codeblock"><textarea name="code" class="java" >
+create table employee(
+id number(10),
+name varchar2(100),
+salary number(10)
+);
+</textarea></div>
+
+<strong>Employee.java</strong>
+<p>This class contains 3 properties with constructors and setter and getters. It defines one extra method toString().</p>
+
+<div class="codeblock"><textarea name="code" class="java" >
+package com.javatpoint;
+
+public class Employee {
+private int id;
+private String name;
+private float salary;
+//no-arg and parameterized constructors
+//getters and setters
+
+public String toString(){
+	return id+" "+name+" "+salary;
+}
+}
+</textarea></div>
+
+<strong>EmployeeDao.java</strong>
+<p>It contains on property jdbcTemplate and one method getAllEmployees.</p>
+
+<div class="codeblock"><textarea name="code" class="java" >
+package com.javatpoint;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
+
+public class EmployeeDao {
+private JdbcTemplate template;
+
+public void setTemplate(JdbcTemplate template) {
+	this.template = template;
+}
+
+public List&lt;Employee&gt; getAllEmployees(){
+ return template.query("select * from employee",new ResultSetExtractor&lt;List&lt;Employee&gt;&gt;(){
+	@Override
+	 public List&lt;Employee&gt; extractData(ResultSet rs) throws SQLException,
+			DataAccessException {
+	
+		List&lt;Employee&gt; list=new ArrayList&lt;Employee&gt;();
+		while(rs.next()){
+		Employee e=new Employee();
+		e.setId(rs.getInt(1));
+		e.setName(rs.getString(2));
+		e.setSalary(rs.getInt(3));
+		list.add(e);
+		}
+		return list;
+		}
+	});
+  }
+}
+
+</textarea></div>
+
+<strong>applicationContext.xml</strong>
+<p>The <strong>DriverManagerDataSource</strong> is used to contain the information about the database such as driver class name, connnection URL, username and password.</p>
+<p>There are a property named <b>datasource</b> in the JdbcTemplate class of DriverManagerDataSource type. So, we need to provide the reference of DriverManagerDataSource object in the JdbcTemplate class for the datasource property.</p>
+<p>Here, we are using the JdbcTemplate object in the EmployeeDao class, so we are passing it by the setter method but you can use constructor also.</p>
+
+<div class="codeblock"><textarea name="code" class="java" >
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"&gt;
+
+&lt;bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource"&gt;
+&lt;property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" /&gt;
+&lt;property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" /&gt;
+&lt;property name="username" value="system" /&gt;
+&lt;property name="password" value="oracle" /&gt;
+&lt;/bean&gt;
+
+&lt;bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"&gt;
+&lt;property name="dataSource" ref="ds"&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id="edao" class="com.javatpoint.EmployeeDao"&gt;
+&lt;property name="jdbcTemplate" ref="jdbcTemplate"&gt;&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;/beans&gt;
+</textarea></div>
+
+<strong>Test.java</strong>
+<p>This class gets the bean from the applicationContext.xml file and calls the getAllEmployees() method of EmployeeDao class.</p>
+<div class="codeblock"><textarea name="code" class="java" >
+package com.javatpoint;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+public class Test {
+
+public static void main(String[] args) {
+	ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContext.xml");
+	EmployeeDao dao=(EmployeeDao)ctx.getBean("edao");
+	List&lt;Employee&gt; list=dao.getAllEmployees();
+		
+	for(Employee e:list)
+		System.out.println(e);
+		
+	}
+
+}
+
+</textarea></div>
+<div id="download">
+<a href="src/sp/jdbc3.zip">download this example (developed using MyEclipse IDE)</a><br>
+<a href="src/sp/eclipse/jdbc3.zip">download this example (developed using Eclipse IDE)</a><br>
+</div>
+
+
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="RowMapper-example.html">RowMapper Example</a></span>
+</div>
+
+<!-- link -->
+<br/><br/>
+
+<div id="bottomnext">
+
+<a style="float:left" class="next" href="example-of-PreparedStatement-in-Spring-JdbcTemplate.html">&lt;&lt;prev</a>
+
+<a style="float:right" class="next" href="RowMapper-example.html">next&gt;&gt;</a>
+</div>
+
+<br/><br/>
+
+</td></tr>
+</table>
+</div>
+
+
+<h2 class="h2">Please Share</h2>
+<a rel="nofollow" title="Facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=https://www.javatpoint.com/ResultSetExtractor-example"><img src="images/facebook32.png" alt="facebook"/></a>
+<a rel="nofollow" title="Twitter" target="_blank" href="http://twitter.com/share?url=https://www.javatpoint.com/ResultSetExtractor-example&amp;text=Spring%20ResultSetExtractor%20Example%20-%20javatpoint"><img src="images/twitter32.png" alt="twitter"/></a>
+<a rel="nofollow" title="Google+" target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=https://www.javatpoint.com/ResultSetExtractor-example"><img src="images/google-plus32.png" alt="google plus"/></a>
+<a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/ResultSetExtractor-example&amp;description=Spring%20ResultSetExtractor%20Example%20-%20javatpoint"><img src="images/pinterest32.png" alt="pinterest"/></a>
+<a rel="nofollow" title="Tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=https://www.javatpoint.com/ResultSetExtractor-example"><img src="images/tumblr32.png" alt="tumbler"/></a>
+
+
+
+<!-- latest tutorials start -->
+<h2 class="h2">Latest 4 Tutorials</h2>
+<div class="firsthomecontent">
+
+<a href="mariadb-tutorial.html">
+<div class="homecontent">
+<img src="mariadb/images/mariadb-home.png" alt="MariaDB tutorial"/><span class="homespan">MariaDB</span>
+</div>
+</a>
+
+<a href="ado-net-tutorial.html">
+<div class="homecontent">
+<img src="ado/images/ado-net-home.jpg" alt="ADO.NET tutorial"/><span class="homespan">ADO.NET</span>
+</div>
+</a>
+
+<a href="asp-net-tutorial.html">
+<div class="homecontent">
+<img src="asp/images/asp-net-home.png" alt="ASP.NET tutorial"/><span class="homespan">ASP.NET</span>
+</div>
+</a>
+
+<a href="sql-server-tutorial.html">
+<div class="homecontent">
+<img src="sqlserver/images/sql-server-home.jpg" alt="SQL Server tutorial"/><span class="homespan">SQL Server</span>
+</div>
+</a>
+
+</div>
+
+</div>
+
+
+<br/><div class="mobilemenu" style="clear:both">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- responsivemobilefooter --><ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="8222866318"     data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<div id="right" style="width:15%;float:left;margin-left:10px;margin-top:10px;">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"     style="display:inline-block;width:160px;height:600px"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="3155368314"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script><br/><br/><br/>
+
+
+
+
+</div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"><script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- right1024only --><ins class="adsbygoogle" style="display:inline-block;width:120px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="2180118716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<br/><br/>
+</div>
+
+<div id="footer" style="clear:both;width:100%">
+
+<!--<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#90715c,#523b1f);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Summer Training</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers <strong>Summer Internship Training</strong> on Java, PHP, .Net, Hadoop, Data Analytics, R Programming, SAP, Android, Python, Oracle, Seleninum, Linux, C++ and many more technologies in Delhi/NCR, India. For more visit <a style="color:white" href="http://training.javatpoint.com"><img src="images/linkglobe12.png" alt="javatpoint training"/>training.javatpoint.com</a>
+    <br>
+    Course Fee: &#8377; 6000 Only<br>
+    Duration: 6 Week
+    </p>
+</div>
+-->
+<div style="width:100%;float:center;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Website Development Services</h2>
+    <p style="padding:0px 20px 0px 20px">JavaTpoint (SSS IT Pvt Ltd) provides website development services in affordable cost. We develop websites on WordPress, Core PHP, CakePHP, CodeIgnitor, Open Cart, Servlet-JSP, Struts 2 and Spring technologies. Send us your requirement at hr@javatpoint.com. We will show you a free demo first, then we will proceed further.
+    </p>
+    <table style="width:400px;padding:0px 20px 60px 20px">
+        <tr><td>Personal Blog</td><td>$150 Only</td></tr>
+        <tr><td>School Website</td><td>$200 Only</td></tr>
+        <tr><td>Company Website</td><td>$300 Only</td></tr>
+        <tr><td>Showroom Website</td><td>$300 Only</td></tr>
+        <tr><td>News Portal</td><td>$400 Only</td></tr>
+        <tr><td>E-Commerce Website</td><td>$500 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (PHP)</td><td>$3000 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (Java)</td><td>$18000 Approx</td></tr>
+        
+        <tr><td></td><td></td></tr>
+    </table>
+</div>
+<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at hr@javatpoint.com.
+    <br>
+    Course Fee: &#8377; 2000 Per Student<br>
+    </p>
+</div>
+
+<!--<div class="homebox2">
+<h2>Our Initiatives</h2>
+<marquee behavior="alternate">
+<a rel="nofollow" href="https://www.hindi100.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/javatpoint.png" alt="javatpoint"/>
+<p>Hindi100</p>
+</div>
+</a>
+
+<a rel="nofollow" href="https://www.lyricsia.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/lyrics.png" alt="lyrics"/>
+<p>Lyricsia</p>
+</div>
+</a>
+
+<a rel="nofollow" href="http://www.hindi-typing.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/hindi-typing.png" alt="hindi-typing"/>
+<p>Hindi-Typing</p>
+</div>
+</a>
+</marquee>
+</div>
+-->
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
+<div style="margin-top:5px;text-align:center">
+    <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup>
+    <a target="_blank" href="https://feeds.feedburner.com/javatpointsonoo"><img src="images/social/rss1.png" alt="RSS Feed"/></a>
+    <a target="_blank" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="images/social/mail1.png" alt="Subscribe to Get Email Alerts"/></a>
+    <a target="_blank" href="https://www.facebook.com/javatpoint"><img src="images/social/facebook1.jpg" alt="Facebook Page"/></a>
+    <a target="_blank" rel="author" href="https://plus.google.com/u/0/113973042385691981314/posts"><img src="images/social/google1.png" alt="Google Page"/></a>
+    <a target="_blank" href="https://twitter.com/pagejavatpoint"><img src="images/social/twitter1.png" alt="Twitter Page"/></a>
+    <a target="_blank" href="https://javatpoint.blogspot.com/"><img src="images/social/blog.png" alt="Blog Page"/></a>
+    <!--<a href="#" style="font:bold 18px arial;text-decoration:none;"><sup>&uarr;Top</sup></a>-->
+</div>
+
+<footer class="footer1">
+<div class="column4">
+<h3>Popular Topics</h3>
+<a href="java-tutorial.html">Java Tutorial</a>
+<a href="c-programming-language-tutorial.html">C Tutorial</a>
+<a href="cpp-tutorial.html">C++ Tutorial</a>
+<a href="c-sharp-tutorial.html">C# Tutorial</a>
+<a href="php-tutorial.html">PHP Tutorial</a>
+<a href="html-tutorial.html">HTML Tutorial</a>
+<a href="css-tutorial.html">CSS Tutorial</a>
+<a href="javascript-tutorial.html">JavaScript Tutorial</a>
+<a href="jquery-tutorial.html">jQuery Tutorial</a>
+<a href="spring-tutorial.html">Spring Tutorial</a>
+</div>
+<div class="column4">
+<h3>Our Websites</h3>
+<a rel="nofollow" target="_blank" href="index.html">Javatpoint.com</a>
+<a rel="nofollow" target="_blank" href="https://www.hindi100.com/">Hindi100.com</a>
+<a rel="nofollow" target="_blank" href="https://www.lyricsia.com/">Lyricsia.com</a>
+<a rel="nofollow" target="_blank" href="https://www.quoteperson.com/">Quoteperson.com</a>
+<a rel="nofollow" target="_blank" href="http://www.hindi-typing.com/">Hindi-typing.com</a>
+<a rel="nofollow" target="_blank" href="http://www.shayaree.com/">Shayaree.com</a>
+<a rel="nofollow" target="_blank" href="https://www.wordcountee.com/">Wordcountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.charactercountee.com/">Charactercountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.jobandplacement.com/">Jobandplacement.com</a>
+</div>
+<div class="column4">
+<h3>Our Services</h3>
+<p>Website Development</p>
+<p>Android Development</p>
+<p>Website Designing</p>
+<p>Digital Marketing</p>
+<p>Summer Training</p>
+<p>Industrial Training</p>
+<p>College Campus Training</p>
+</div>
+<div class="column4">
+<h3>Contact</h3>
+<p>Address: G-13, 2nd Floor, Sec-3</p>
+<p>Noida, UP, 201301, India</p>
+<p>Contact No: 0120-4256464, 9990449935</p>
+<p>Email: hr@javatpoint.com</p>
+<a href="contact-us.html">Contact Us</a> 
+<a href="subscribe.html">Subscribe Us</a> 
+<a href="privacy-policy.html">Privacy Policy</a>
+
+</div>
+</footer>
+
+<footer class="footer2">
+<p>&copy; Copyright 2011-2017 www.javatpoint.com. All rights reserved.  <a rel="nofollow" target="_blank" href="https://www.sssit.org/">Developed by SSS IT Pvt Ltd (JavaTpoint)</a> </p>
+</footer>
+
+
+</div></div></div>
+<script src="js/shcoreandbrush.js"></script><script type="text/javascript"> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+
+</body> 
+<!-- Mirrored from www.javatpoint.com/ResultSetExtractor-example by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 10:06:50 GMT -->
+</html> 

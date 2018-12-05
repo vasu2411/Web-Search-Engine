@@ -1,0 +1,676 @@
+ <!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.javatpoint.com/Pic-Puzzle-Game by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 10:12:12 GMT -->
+<head><meta charset="utf-8"><title>Picture Puzzle Game in Java with Source Code - javatpoint</title><link rel="SHORTCUT ICON" href="images/logo/icon.png" /><link rel="stylesheet" type="text/css" href="link.css" /><meta name="keywords" content="Picture Puzzle Game"/><meta name="description" content="Picture Puzzle Game in Java with Source Code, example of picture puzzle game, Swing Tutorial with example of JButton, JRadioButton, JTextField, JTextArea, JList, JColorChooser classes that are found in javax.swing package."/><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="canonical" href="Pic-Puzzle-Game.html" />
+<meta itemprop="name" content="Picture Puzzle Game in Java with Source Code - javatpoint"><meta itemprop="description" content="Picture Puzzle Game in Java with Source Code, example of picture puzzle game, Swing Tutorial with example of JButton, JRadioButton, JTextField, JTextArea, JList, JColorChooser classes that are found in javax.swing package."><meta property="og:title" content="Picture Puzzle Game in Java with Source Code - javatpoint" /><meta property="og:description" content="Picture Puzzle Game in Java with Source Code, example of picture puzzle game, Swing Tutorial with example of JButton, JRadioButton, JTextField, JTextArea, JList, JColorChooser classes that are found in javax.swing package." />
+<meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta name="twitter:title" property="og:title" content="Picture Puzzle Game in Java with Source Code - javatpoint" /><meta name="twitter:description" property="og:description" content="Picture Puzzle Game in Java with Source Code, example of picture puzzle game, Swing Tutorial with example of JButton, JRadioButton, JTextField, JTextArea, JList, JColorChooser classes that are found in javax.swing package." /><meta property="og:url" content="Pic-Puzzle-Game.html" /><meta property="og:site_name" content="www.javatpoint.com" /><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@pagejavatpoint"/><meta name="twitter:domain" content="www.javatpoint.com"/><meta name="twitter:creator" content="@pagejavatpoint"/></head> 
+<body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+<div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header"><!--<p style="font-weight:bold;padding:7px;color:white;background-color:gray;margin:0px"><marquee>JavaTpoint will be down for 2 to 4 hours tonight. Sorry for inconvenience.</marquee></p>-->
+
+<table style="width:100%"><tr><td><div id="headerlink" style="padding:0px;margin:0px"><span style="margin-right:20px;width:45%px"></span><span style="float:right;margin-right:5px;width:45%"> 
+
+</span>
+
+<hr class="upperhr"/>
+</div> </td></tr><tr><td>
+<div style="clear:both;float:left;width:230px;margin-left:20px"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"/></a></div>
+
+<div style="float:left;width:60%;"><form class="navbar-search" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form><!--<span style="margin-left:100px;color:orange;font-size:20px;font-weight:bold;">Happy </span><span style="color:red;font-size:20px;font-weight:bold;">New </span><span style="color:#666600;font-size:20px;font-weight:bold;">Year</span><span style="color:#666600;font-size:30px;font-weight:bold;"> 2015</span>--></div>
+
+</td></tr></table> </div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input type="image" src="images/menuhome64.png" onclick="showmenu()"/></span>
+<span style="float:left"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both"><form class="navbar-search-m" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2-m" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form></div></div>
+<div id="link" style="clear:both"> <div id="smoothmenu1" class="ddsmoothmenu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="c-programming-language-tutorial.html">C</a></li>
+<li><a href="cpp-tutorial.html">C++</a></li>
+<li><a href="c-sharp-tutorial.html">C#</a></li>
+<li><a href="java-tutorial.html" class="selected">Java</a></li>
+<li><a href="servlet-tutorial.html">Servlet</a></li>
+<li><a href="jsp-tutorial.html">JSP</a></li>
+<li><a href="ejb-tutorial.html">EJB</a></li>
+<li><a href="struts-2-tutorial.html">Struts2</a></li>
+<li><a href="java-mail-api-tutorial.html">Mail</a></li>
+<li><a href="hibernate-tutorial.html">Hibernate</a></li>
+<li><a href="spring-tutorial.html">Spring</a></li>
+<li><a href="android-tutorial.html">Android</a></li>
+<li><a href="design-patterns-in-java.html">Design P</a></li>
+<li><a href="examaccess.html">Quiz</a></li>
+<li><a href="free-java-projects.html">Projects</a></li>
+<li><a href="corejava-interview-questions.html">Interview Q</a>
+<li><a href="comment.html">Comment</a>
+<li><a href="forum.html">Forum</a>
+<li><a href="http://training.javatpoint.com/">Training</a>
+</li>
+</ul>
+<br style="clear: left" />
+</div>
+</div><div class="mobilemenu" style="clear:both"> </div>
+
+<div id="menu"><div class="leftmenu2" >
+<a href="java-tutorial.html"><span>Basics of Java </span></a>
+<a href="java-oops-concepts.html"><span>OOPs Concepts</span></a>
+<a href="java-string.html"><span>Java String</span></a>
+<a href="java-regex.html"><span>Java Regex</span></a>
+<a href="exception-handling-in-java.html"><span>Exception Handling</span></a>
+<a href="java-inner-class.html"><span>Java Inner classes</span></a>
+<a href="multithreading-in-java.html"><span>Java Multithreading</span></a>
+<a href="java-io.html"><span>Java I/O</span></a>
+<a href="java-networking.html"><span>Java Networking</span></a>
+<a href="java-awt.html"><span>Java AWT &amp; Events</span></a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Java Swing</span></h2>
+</div>
+<div class="leftmenu">
+<a href="java-swing.html" class="l1">Swing Introduction</a>
+<a href="java-jbutton.html">Java JButton</a>
+<a href="java-jlabel.html">Java JLabel</a>
+<a href="java-jtextfield.html">Java JTextField</a>
+<a href="java-jtextarea.html">Java JTextArea</a>
+<a href="java-jpasswordfield.html">Java JPasswordField</a>
+<a href="java-jcheckbox.html">Java JCheckBox</a>
+<a href="java-jradiobutton.html">Java JRadioButton</a>
+<a href="java-jcombobox.html">Java JComboBox</a>
+<a href="java-jtable.html">Java JTable </a>
+<a href="java-jlist.html">Java JList</a>
+<a href="java-joptionpane.html">Java JOptionPane</a>
+<a href="java-jscrollbar.html">Java JScrollBar</a>
+<a href="java-jmenuitem-and-jmenu.html">Java JMenuItem &amp; JMenu</a>
+<a href="java-jpopupmenu.html">Java JPopupMenu</a>
+<a href="java-jseparator.html">Java JSeparator</a>
+<a href="java-jprogressbar.html">Java JProgressBar</a>
+<a href="java-jtree.html">Java JTree</a>
+<a href="java-jcolorchooser.html">Java JColorChooser</a>
+<a href="java-jtabbedpane.html">Java JTabbedPane</a>
+<a href="java-jslider.html">Java JSlider</a>
+<a href="java-jspinner.html">Java JSpinner</a>
+<a href="java-jdialog.html">Java JDialog</a>
+<a href="java-jpanel.html">Java JPanel</a>
+<a href="java-jfilechooser.html">Java JFileChooser</a>
+<a href="java-jlayeredpane.html">Java JLayeredPane</a>
+<a href="how-to-use-tooltip-in-java-swing.html">Using ToolTip</a>
+<a href="how-to-change-titlebar-icon-in-java-awt-swing.html">Change Title Icon</a>
+<a href="how-to-make-an-executable-jar-file-in-java.html">Executable Jar File</a>
+<a href="digital-watch.html" class="l1">Digital Watch</a>
+<a href="Graphics-in-swing.html" class="l1">Graphics in swing</a>
+<a href="Displaying-image-in-swing.html" class="l1">Displaying Image</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Java Swing Apps</span></h2>
+</div>
+<div class="leftmenu" >
+<a href="notepad.html" class="l1">Notepad</a>
+<a href="calculator-in-java.html" class="l1">Calculator</a>
+<a href="ip-finder-in-java.html" class="l1">IP Finder</a>
+<a href="word-count-in-java.html" class="l1">Word Counter</a>
+<a href="url-source-code-generator-in-java.html" class="l1">URL Source Generator</a>
+<a href="folder-explorer-in-java.html" class="l1">Folder Explorer</a>
+<a href="Puzzle-Game.html" class="l1">Puzzle Game</a>
+<a href="Pic-Puzzle-Game.html" class="l1">Pic Puzzle Game</a>
+<a href="tic-tac-toe-game.html" class="l1">Tic Tac Toe Game</a>
+<a href="online-exam-project-in-java-swing-without-database.html" class="l1">Online Exam</a>
+</div>
+
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">LayoutManagers</span></h2>
+</div>
+<div class="leftmenu" >
+<a href="java-layout-manager.html" >BorderLayout</a>
+<a href="GridLayout.html" >GridLayout</a>
+<a href="FlowLayout.html" >FlowLayout</a>
+<a href="BoxLayout.html" >BoxLayout</a>
+<a href="CardLayout.html" >CardLayout</a>
+<a href="java-gridbaglayout.html" >GridBagLayout</a>
+<a href="java-grouplayout.html" >GroupLayout</a>
+<a href="java-springlayout.html" >SpringLayout</a>
+<a href="java-scrollpanelayout.html" >ScrollPaneLayout</a>
+</div>
+
+<div class="leftmenu2">
+<a href="java-applet.html"><span>Java Applet</span></a>
+<a href="java-reflection.html"><span>Java Reflection</span></a>
+<a href="java-date.html"><span>Java Date</span></a>
+<a href="java-string-to-int.html"><span>Java Conversion</span></a>
+<a href="collections-in-java.html"><span>Java Collection</span></a>
+<a href="java-jdbc.html"><span>Java JDBC</span></a>
+<a href="New-features-in-java.html" ><span>Java New Features</span></a>
+<a href="RMI.html"><span>RMI</span></a>
+<a href="internationalization-in-java.html"><span>Internationalization</span></a>
+<a href="corejava-interview-questions.html"><span>Interview Questions</span></a>
+</div>
+
+
+<table id="leftad"><tr><td><img src="images/wh.jpg" alt="space"/></td></tr><tr><td>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script> <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="4476401222"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</td></tr></table>
+
+</div><div class="onlycontent">
+
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- CM_JTP_Leaderbaord -->
+<ins class="adsbygoogle cm_jtp_leaderbaord"
+style="display:inline-block"
+data-ad-client="ca-pub-4699858549023382"
+data-ad-slot="9201901915"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div style="margin-left:0px;">
+<div id="city">
+
+<table>
+<tr><td>
+<div id="bottomnextup">
+
+<a class="next" href="tic-tac-toe-game.html">next&gt;&gt;</a>
+<a class="next" href="Puzzle-Game.html">&lt;&lt;prev</a>
+
+</div>
+<h1 class="h1">Example of Pic Puzzle Game</h1>
+
+
+<img src="images/picpuzzle.jpg" alt="Picture Puzzle game in swing"/>
+
+<div class="codeblock"><textarea name="code" class="java" >
+
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+class picpuzzle2 extends JFrame implements ActionListener{
+JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,sample,starB;
+Icon star;
+Icon ic0=new ImageIcon("pic/starB0.jpg");
+Icon ic10=new ImageIcon("pic/starB10.jpg");
+Icon ic20=new ImageIcon("pic/starB20.jpg");
+Icon samicon1=new ImageIcon("pic/main.jpg");
+Icon samicon2=new ImageIcon("pic/main2.jpg");
+Icon samicon3=new ImageIcon("pic/main3.jpg");
+Icon ic1=new ImageIcon("pic/1.jpg");
+Icon ic2=new ImageIcon("pic/5.jpg");
+Icon ic3=new ImageIcon("pic/2.jpg");
+Icon ic4=new ImageIcon("pic/7.jpg");
+Icon ic5=new ImageIcon("pic/4.jpg");
+Icon ic6=new ImageIcon("pic/6.jpg");
+Icon ic7=new ImageIcon("pic/8.jpg");
+Icon ic8=new ImageIcon("pic/9.jpg");
+Icon ic9=new ImageIcon("pic/3.jpg");
+
+Icon ic11=new ImageIcon("pic/12.jpg");
+Icon ic12=new ImageIcon("pic/13.jpg");
+Icon ic13=new ImageIcon("pic/16.jpg");
+Icon ic14=new ImageIcon("pic/11.jpg");
+Icon ic15=new ImageIcon("pic/14.jpg");
+Icon ic16=new ImageIcon("pic/19.jpg");
+Icon ic17=new ImageIcon("pic/17.jpg");
+Icon ic18=new ImageIcon("pic/15.jpg");
+Icon ic19=new ImageIcon("pic/18.jpg");
+
+Icon ic21=new ImageIcon("pic/24.jpg");
+Icon ic22=new ImageIcon("pic/25.jpg");
+Icon ic23=new ImageIcon("pic/21.jpg");
+Icon ic24=new ImageIcon("pic/27.jpg");
+Icon ic25=new ImageIcon("pic/23.jpg");
+Icon ic26=new ImageIcon("pic/29.jpg");
+Icon ic27=new ImageIcon("pic/28.jpg");
+Icon ic28=new ImageIcon("pic/22.jpg");
+Icon ic29=new ImageIcon("pic/26.jpg");
+
+picpuzzle2(){
+
+super("pic puzzle");
+
+b1=new JButton(ic1);
+b1.setBounds(10,80,100,100);
+b2=new JButton(ic2);
+b2.setBounds(110,80,100,100);
+b3=new JButton(ic3);
+b3.setBounds(210,80,100,100);
+b4=new JButton(ic4);
+b4.setBounds(10,180,100,100);
+b5=new JButton(ic5);
+b5.setBounds(110,180,100,100);
+b6=new JButton(ic6);
+b6.setBounds(210,180,100,100);
+b7=new JButton(ic7);
+b7.setBounds(10,280,100,100);
+b8=new JButton(ic8);
+b8.setBounds(110,280,100,100);
+b9=new JButton(ic9);
+b9.setBounds(210,280,100,100);
+sample=new JButton(samicon1);
+sample.setBounds(380,100,200,200);
+
+JLabel l1=new JLabel("Sample:");
+l1.setBounds(330,200,70,20);
+JLabel l2=new JLabel("NOTE:
+icon has power to swap with neighbour icon=");
+l2.setBounds(5,15,500,20);
+JLabel l3=new JLabel("click sample picture to next puzzle");
+l3.setBounds(380,320,200,20);
+l3.setForeground(Color.red);
+
+starB=new JButton(ic0);
+starB.setBounds(330,5,50,50);
+star=b9.getIcon();
+
+add(b1);add(b2);add(b3);add(b4);add(b5);add(b6);add(b7);add(b8);
+add(b9);add(sample);add(l1);add(l2);add(starB);add(l3);
+b1.addActionListener(this); b2.addActionListener(this);
+ b3.addActionListener(this); b4.addActionListener(this); 
+b5.addActionListener(this); b6.addActionListener(this);
+ b7.addActionListener(this); b8.addActionListener(this);
+ b9.addActionListener(this); 
+
+sample.addActionListener(this);
+setLayout(null);
+setSize(600,500);
+setVisible(true);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}
+
+public void actionPerformed(ActionEvent e){
+if(e.getSource()==b1){
+    Icon s1=b1.getIcon();
+      if(b2.getIcon()==star){
+        b2.setIcon(s1);
+        b1.setIcon(star);
+      } else if(b4.getIcon()==star){
+                    b4.setIcon(s1);
+                    b1.setIcon(star);
+                   }
+  }//end of if
+
+if(e.getSource()==b2){
+    Icon s1=b2.getIcon();
+      if(b1.getIcon()==star){
+        b1.setIcon(s1);
+        b2.setIcon(star);
+      } else if(b5.getIcon()==star){
+                    b5.setIcon(s1);
+                    b2.setIcon(star);
+                   }
+         else if(b3.getIcon()==star){
+                    b3.setIcon(s1);
+                    b2.setIcon(star);
+                   }
+  }//end of if
+
+if(e.getSource()==b3){
+    Icon s1=b3.getIcon();
+      if(b2.getIcon()==star){
+        b2.setIcon(s1);
+        b3.setIcon(star);
+      } else if(b6.getIcon()==star){
+                    b6.setIcon(s1);
+                    b3.setIcon(star);
+                   }
+  }//end of if
+
+if(e.getSource()==b4){
+    Icon s1=b4.getIcon();
+      if(b1.getIcon()==star){
+        b1.setIcon(s1);
+        b4.setIcon(star);
+      } else if(b5.getIcon()==star){
+                    b5.setIcon(s1);
+                    b4.setIcon(star);
+                   }
+         else if(b7.getIcon()==star){
+                    b7.setIcon(s1);
+                    b4.setIcon(star);
+                   }
+  }//end of if
+
+if(e.getSource()==b5){
+    Icon s1=b5.getIcon();
+      if(b2.getIcon()==star){
+        b2.setIcon(s1);
+        b5.setIcon(star);
+      } else if(b4.getIcon()==star){
+                    b4.setIcon(s1);
+                    b5.setIcon(star);
+                   }
+         else if(b6.getIcon()==star){
+                    b6.setIcon(s1);
+                    b5.setIcon(star);
+                   }
+          else if(b8.getIcon()==star){
+                    b8.setIcon(s1);
+                    b5.setIcon(star);
+                   }
+  }//end of if
+
+if(e.getSource()==b6){
+    Icon s1=b6.getIcon();
+      if(b3.getIcon()==star){
+        b3.setIcon(s1);
+        b6.setIcon(star);
+      } else if(b5.getIcon()==star){
+                    b5.setIcon(s1);
+                    b6.setIcon(star);
+                   }
+         else if(b9.getIcon()==star){
+                    b9.setIcon(s1);
+                    b6.setIcon(star);
+                   }
+}//end of if
+
+if(e.getSource()==b7){
+    Icon s1=b7.getIcon();
+      if(b4.getIcon()==star){
+        b4.setIcon(s1);
+        b7.setIcon(star);
+      } else if(b8.getIcon()==star){
+                    b8.setIcon(s1);
+                    b7.setIcon(star);
+                   }
+ }//end of if
+
+   if(e.getSource()==b8){
+    Icon s1=b8.getIcon();
+      if(b7.getIcon()==star){
+        b7.setIcon(s1);
+        b8.setIcon(star);
+      } else if(b5.getIcon()==star){
+                    b5.setIcon(s1);
+                    b8.setIcon(star);
+                   }
+         else if(b9.getIcon()==star){
+                    b9.setIcon(s1);
+                    b8.setIcon(star);
+                   }
+
+  }//end of if
+
+ if(e.getSource()==b9){
+    Icon s1=b9.getIcon();
+      if(b8.getIcon()==star){
+        b8.setIcon(s1);
+        b9.setIcon(star);
+      } else if(b6.getIcon()==star){
+                    b6.setIcon(s1);
+                    b9.setIcon(star);
+                   }
+  }//end of if
+
+if(e.getSource()==sample){
+Icon s1=sample.getIcon();
+ if(s1==samicon3){
+sample.setIcon(samicon1);
+b1.setIcon(ic1);
+b2.setIcon(ic2);
+b3.setIcon(ic3);
+b4.setIcon(ic4);
+b5.setIcon(ic5);
+b6.setIcon(ic6);
+b7.setIcon(ic7);
+b8.setIcon(ic8);
+b9.setIcon(ic9);
+star=b9.getIcon();
+starB.setIcon(ic0);
+}//eof if
+else if(s1==samicon1){
+sample.setIcon(samicon2);
+b1.setIcon(ic11);
+b2.setIcon(ic12);
+b3.setIcon(ic13);
+b4.setIcon(ic14);
+b5.setIcon(ic15);
+b6.setIcon(ic16);
+b7.setIcon(ic17);
+b8.setIcon(ic18);
+b9.setIcon(ic19);
+star=b6.getIcon();
+starB.setIcon(ic10);
+}//eof else
+else{
+sample.setIcon(samicon3);
+b1.setIcon(ic21);
+b2.setIcon(ic22);
+b3.setIcon(ic23);
+b4.setIcon(ic24);
+b5.setIcon(ic25);
+b6.setIcon(ic26);
+b7.setIcon(ic27);
+b8.setIcon(ic28);
+b9.setIcon(ic29);
+star=b6.getIcon();
+starB.setIcon(ic20);
+}//eof else
+
+}
+}//end of actionPerformed
+
+public static void main(String args[]){
+new picpuzzle2();
+}//end of main
+}//end of class
+
+</textarea></div>
+
+<div id="download">
+<a href="src/swing/PicPuzzle.zip">download this example</a>
+</div>
+
+
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="tic-tac-toe-game.html">Tic Tac Toe Game</a></span>
+</div>
+
+
+<!-- link -->
+<br/><br/>
+<div id="bottomnext">
+
+<a style="float:left" class="next" href="Puzzle-Game.html">&lt;&lt;prev</a>
+
+<a style="float:right" class="next" href="tic-tac-toe-game.html">next&gt;&gt;</a>
+</div>
+<br/><br/>
+
+</td></tr></table>
+</div>
+
+
+
+
+
+<h2 class="h2">Please Share</h2>
+<a rel="nofollow" title="Facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=https://www.javatpoint.com/Pic-Puzzle-Game"><img src="images/facebook32.png" alt="facebook"/></a>
+<a rel="nofollow" title="Twitter" target="_blank" href="http://twitter.com/share?url=https://www.javatpoint.com/Pic-Puzzle-Game&amp;text=Picture%20Puzzle%20Game%20in%20Java%20with%20Source%20Code%20-%20javatpoint"><img src="images/twitter32.png" alt="twitter"/></a>
+<a rel="nofollow" title="Google+" target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=https://www.javatpoint.com/Pic-Puzzle-Game"><img src="images/google-plus32.png" alt="google plus"/></a>
+<a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/Pic-Puzzle-Game&amp;description=Picture%20Puzzle%20Game%20in%20Java%20with%20Source%20Code%20-%20javatpoint"><img src="images/pinterest32.png" alt="pinterest"/></a>
+<a rel="nofollow" title="Tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=https://www.javatpoint.com/Pic-Puzzle-Game"><img src="images/tumblr32.png" alt="tumbler"/></a>
+
+
+
+<!-- latest tutorials start -->
+<h2 class="h2">Latest 4 Tutorials</h2>
+<div class="firsthomecontent">
+
+<a href="mariadb-tutorial.html">
+<div class="homecontent">
+<img src="mariadb/images/mariadb-home.png" alt="MariaDB tutorial"/><span class="homespan">MariaDB</span>
+</div>
+</a>
+
+<a href="ado-net-tutorial.html">
+<div class="homecontent">
+<img src="ado/images/ado-net-home.jpg" alt="ADO.NET tutorial"/><span class="homespan">ADO.NET</span>
+</div>
+</a>
+
+<a href="asp-net-tutorial.html">
+<div class="homecontent">
+<img src="asp/images/asp-net-home.png" alt="ASP.NET tutorial"/><span class="homespan">ASP.NET</span>
+</div>
+</a>
+
+<a href="sql-server-tutorial.html">
+<div class="homecontent">
+<img src="sqlserver/images/sql-server-home.jpg" alt="SQL Server tutorial"/><span class="homespan">SQL Server</span>
+</div>
+</a>
+
+</div>
+
+</div>
+
+
+<br/><div class="mobilemenu" style="clear:both">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- responsivemobilefooter --><ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="8222866318"     data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<div id="right" style="width:15%;float:left;margin-left:10px;margin-top:10px;">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"     style="display:inline-block;width:160px;height:600px"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="3155368314"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script><br/><br/><br/>
+
+
+
+
+</div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"><script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- right1024only --><ins class="adsbygoogle" style="display:inline-block;width:120px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="2180118716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<br/><br/>
+</div>
+
+<div id="footer" style="clear:both;width:100%">
+
+<!--<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#90715c,#523b1f);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Summer Training</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers <strong>Summer Internship Training</strong> on Java, PHP, .Net, Hadoop, Data Analytics, R Programming, SAP, Android, Python, Oracle, Seleninum, Linux, C++ and many more technologies in Delhi/NCR, India. For more visit <a style="color:white" href="http://training.javatpoint.com"><img src="images/linkglobe12.png" alt="javatpoint training"/>training.javatpoint.com</a>
+    <br>
+    Course Fee: &#8377; 6000 Only<br>
+    Duration: 6 Week
+    </p>
+</div>
+-->
+<div style="width:100%;float:center;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Website Development Services</h2>
+    <p style="padding:0px 20px 0px 20px">JavaTpoint (SSS IT Pvt Ltd) provides website development services in affordable cost. We develop websites on WordPress, Core PHP, CakePHP, CodeIgnitor, Open Cart, Servlet-JSP, Struts 2 and Spring technologies. Send us your requirement at hr@javatpoint.com. We will show you a free demo first, then we will proceed further.
+    </p>
+    <table style="width:400px;padding:0px 20px 60px 20px">
+        <tr><td>Personal Blog</td><td>$150 Only</td></tr>
+        <tr><td>School Website</td><td>$200 Only</td></tr>
+        <tr><td>Company Website</td><td>$300 Only</td></tr>
+        <tr><td>Showroom Website</td><td>$300 Only</td></tr>
+        <tr><td>News Portal</td><td>$400 Only</td></tr>
+        <tr><td>E-Commerce Website</td><td>$500 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (PHP)</td><td>$3000 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (Java)</td><td>$18000 Approx</td></tr>
+        
+        <tr><td></td><td></td></tr>
+    </table>
+</div>
+<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at hr@javatpoint.com.
+    <br>
+    Course Fee: &#8377; 2000 Per Student<br>
+    </p>
+</div>
+
+<!--<div class="homebox2">
+<h2>Our Initiatives</h2>
+<marquee behavior="alternate">
+<a rel="nofollow" href="https://www.hindi100.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/javatpoint.png" alt="javatpoint"/>
+<p>Hindi100</p>
+</div>
+</a>
+
+<a rel="nofollow" href="https://www.lyricsia.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/lyrics.png" alt="lyrics"/>
+<p>Lyricsia</p>
+</div>
+</a>
+
+<a rel="nofollow" href="http://www.hindi-typing.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/hindi-typing.png" alt="hindi-typing"/>
+<p>Hindi-Typing</p>
+</div>
+</a>
+</marquee>
+</div>
+-->
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
+<div style="margin-top:5px;text-align:center">
+    <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup>
+    <a target="_blank" href="https://feeds.feedburner.com/javatpointsonoo"><img src="images/social/rss1.png" alt="RSS Feed"/></a>
+    <a target="_blank" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="images/social/mail1.png" alt="Subscribe to Get Email Alerts"/></a>
+    <a target="_blank" href="https://www.facebook.com/javatpoint"><img src="images/social/facebook1.jpg" alt="Facebook Page"/></a>
+    <a target="_blank" rel="author" href="https://plus.google.com/u/0/113973042385691981314/posts"><img src="images/social/google1.png" alt="Google Page"/></a>
+    <a target="_blank" href="https://twitter.com/pagejavatpoint"><img src="images/social/twitter1.png" alt="Twitter Page"/></a>
+    <a target="_blank" href="https://javatpoint.blogspot.com/"><img src="images/social/blog.png" alt="Blog Page"/></a>
+    <!--<a href="#" style="font:bold 18px arial;text-decoration:none;"><sup>&uarr;Top</sup></a>-->
+</div>
+
+<footer class="footer1">
+<div class="column4">
+<h3>Popular Topics</h3>
+<a href="java-tutorial.html">Java Tutorial</a>
+<a href="c-programming-language-tutorial.html">C Tutorial</a>
+<a href="cpp-tutorial.html">C++ Tutorial</a>
+<a href="c-sharp-tutorial.html">C# Tutorial</a>
+<a href="php-tutorial.html">PHP Tutorial</a>
+<a href="html-tutorial.html">HTML Tutorial</a>
+<a href="css-tutorial.html">CSS Tutorial</a>
+<a href="javascript-tutorial.html">JavaScript Tutorial</a>
+<a href="jquery-tutorial.html">jQuery Tutorial</a>
+<a href="spring-tutorial.html">Spring Tutorial</a>
+</div>
+<div class="column4">
+<h3>Our Websites</h3>
+<a rel="nofollow" target="_blank" href="index.html">Javatpoint.com</a>
+<a rel="nofollow" target="_blank" href="https://www.hindi100.com/">Hindi100.com</a>
+<a rel="nofollow" target="_blank" href="https://www.lyricsia.com/">Lyricsia.com</a>
+<a rel="nofollow" target="_blank" href="https://www.quoteperson.com/">Quoteperson.com</a>
+<a rel="nofollow" target="_blank" href="http://www.hindi-typing.com/">Hindi-typing.com</a>
+<a rel="nofollow" target="_blank" href="http://www.shayaree.com/">Shayaree.com</a>
+<a rel="nofollow" target="_blank" href="https://www.wordcountee.com/">Wordcountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.charactercountee.com/">Charactercountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.jobandplacement.com/">Jobandplacement.com</a>
+</div>
+<div class="column4">
+<h3>Our Services</h3>
+<p>Website Development</p>
+<p>Android Development</p>
+<p>Website Designing</p>
+<p>Digital Marketing</p>
+<p>Summer Training</p>
+<p>Industrial Training</p>
+<p>College Campus Training</p>
+</div>
+<div class="column4">
+<h3>Contact</h3>
+<p>Address: G-13, 2nd Floor, Sec-3</p>
+<p>Noida, UP, 201301, India</p>
+<p>Contact No: 0120-4256464, 9990449935</p>
+<p>Email: hr@javatpoint.com</p>
+<a href="contact-us.html">Contact Us</a> 
+<a href="subscribe.html">Subscribe Us</a> 
+<a href="privacy-policy.html">Privacy Policy</a>
+
+</div>
+</footer>
+
+<footer class="footer2">
+<p>&copy; Copyright 2011-2017 www.javatpoint.com. All rights reserved.  <a rel="nofollow" target="_blank" href="https://www.sssit.org/">Developed by SSS IT Pvt Ltd (JavaTpoint)</a> </p>
+</footer>
+
+
+</div></div></div>
+<script src="js/shcoreandbrush.js"></script><script type="text/javascript"> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+
+</body> 
+<!-- Mirrored from www.javatpoint.com/Pic-Puzzle-Game by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 10:12:13 GMT -->
+</html> 

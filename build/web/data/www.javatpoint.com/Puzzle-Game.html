@@ -1,0 +1,724 @@
+ <!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.javatpoint.com/Puzzle-Game by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 10:12:11 GMT -->
+<head><meta charset="utf-8"><title>Puzzle Game in Java with Source Code - javatpoint</title><link rel="SHORTCUT ICON" href="images/logo/icon.png" /><link rel="stylesheet" type="text/css" href="link.css" /><meta name="keywords" content="Puzzle Game, example of puzzle game"/><meta name="description" content="Puzzle Game in Java with Source Code, Example of Puzzle Game in java, Swing Tutorial with example of JButton, JRadioButton, JTextField, JTextArea, JList, JColorChooser classes that are found in javax.swing package."/><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="canonical" href="Puzzle-Game.html" />
+<meta itemprop="name" content="Puzzle Game in Java with Source Code - javatpoint"><meta itemprop="description" content="Puzzle Game in Java with Source Code, Example of Puzzle Game in java, Swing Tutorial with example of JButton, JRadioButton, JTextField, JTextArea, JList, JColorChooser classes that are found in javax.swing package."><meta property="og:title" content="Puzzle Game in Java with Source Code - javatpoint" /><meta property="og:description" content="Puzzle Game in Java with Source Code, Example of Puzzle Game in java, Swing Tutorial with example of JButton, JRadioButton, JTextField, JTextArea, JList, JColorChooser classes that are found in javax.swing package." />
+<meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta name="twitter:title" property="og:title" content="Puzzle Game in Java with Source Code - javatpoint" /><meta name="twitter:description" property="og:description" content="Puzzle Game in Java with Source Code, Example of Puzzle Game in java, Swing Tutorial with example of JButton, JRadioButton, JTextField, JTextArea, JList, JColorChooser classes that are found in javax.swing package." /><meta property="og:url" content="Puzzle-Game.html" /><meta property="og:site_name" content="www.javatpoint.com" /><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@pagejavatpoint"/><meta name="twitter:domain" content="www.javatpoint.com"/><meta name="twitter:creator" content="@pagejavatpoint"/></head> 
+<body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+<div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header"><!--<p style="font-weight:bold;padding:7px;color:white;background-color:gray;margin:0px"><marquee>JavaTpoint will be down for 2 to 4 hours tonight. Sorry for inconvenience.</marquee></p>-->
+
+<table style="width:100%"><tr><td><div id="headerlink" style="padding:0px;margin:0px"><span style="margin-right:20px;width:45%px"></span><span style="float:right;margin-right:5px;width:45%"> 
+
+</span>
+
+<hr class="upperhr"/>
+</div> </td></tr><tr><td>
+<div style="clear:both;float:left;width:230px;margin-left:20px"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"/></a></div>
+
+<div style="float:left;width:60%;"><form class="navbar-search" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form><!--<span style="margin-left:100px;color:orange;font-size:20px;font-weight:bold;">Happy </span><span style="color:red;font-size:20px;font-weight:bold;">New </span><span style="color:#666600;font-size:20px;font-weight:bold;">Year</span><span style="color:#666600;font-size:30px;font-weight:bold;"> 2015</span>--></div>
+
+</td></tr></table> </div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input type="image" src="images/menuhome64.png" onclick="showmenu()"/></span>
+<span style="float:left"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both"><form class="navbar-search-m" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2-m" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form></div></div>
+<div id="link" style="clear:both"> <div id="smoothmenu1" class="ddsmoothmenu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="c-programming-language-tutorial.html">C</a></li>
+<li><a href="cpp-tutorial.html">C++</a></li>
+<li><a href="c-sharp-tutorial.html">C#</a></li>
+<li><a href="java-tutorial.html" class="selected">Java</a></li>
+<li><a href="servlet-tutorial.html">Servlet</a></li>
+<li><a href="jsp-tutorial.html">JSP</a></li>
+<li><a href="ejb-tutorial.html">EJB</a></li>
+<li><a href="struts-2-tutorial.html">Struts2</a></li>
+<li><a href="java-mail-api-tutorial.html">Mail</a></li>
+<li><a href="hibernate-tutorial.html">Hibernate</a></li>
+<li><a href="spring-tutorial.html">Spring</a></li>
+<li><a href="android-tutorial.html">Android</a></li>
+<li><a href="design-patterns-in-java.html">Design P</a></li>
+<li><a href="examaccess.html">Quiz</a></li>
+<li><a href="free-java-projects.html">Projects</a></li>
+<li><a href="corejava-interview-questions.html">Interview Q</a>
+<li><a href="comment.html">Comment</a>
+<li><a href="forum.html">Forum</a>
+<li><a href="http://training.javatpoint.com/">Training</a>
+</li>
+</ul>
+<br style="clear: left" />
+</div>
+</div><div class="mobilemenu" style="clear:both"> </div>
+
+<div id="menu"><div class="leftmenu2" >
+<a href="java-tutorial.html"><span>Basics of Java </span></a>
+<a href="java-oops-concepts.html"><span>OOPs Concepts</span></a>
+<a href="java-string.html"><span>Java String</span></a>
+<a href="java-regex.html"><span>Java Regex</span></a>
+<a href="exception-handling-in-java.html"><span>Exception Handling</span></a>
+<a href="java-inner-class.html"><span>Java Inner classes</span></a>
+<a href="multithreading-in-java.html"><span>Java Multithreading</span></a>
+<a href="java-io.html"><span>Java I/O</span></a>
+<a href="java-networking.html"><span>Java Networking</span></a>
+<a href="java-awt.html"><span>Java AWT &amp; Events</span></a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Java Swing</span></h2>
+</div>
+<div class="leftmenu">
+<a href="java-swing.html" class="l1">Swing Introduction</a>
+<a href="java-jbutton.html">Java JButton</a>
+<a href="java-jlabel.html">Java JLabel</a>
+<a href="java-jtextfield.html">Java JTextField</a>
+<a href="java-jtextarea.html">Java JTextArea</a>
+<a href="java-jpasswordfield.html">Java JPasswordField</a>
+<a href="java-jcheckbox.html">Java JCheckBox</a>
+<a href="java-jradiobutton.html">Java JRadioButton</a>
+<a href="java-jcombobox.html">Java JComboBox</a>
+<a href="java-jtable.html">Java JTable </a>
+<a href="java-jlist.html">Java JList</a>
+<a href="java-joptionpane.html">Java JOptionPane</a>
+<a href="java-jscrollbar.html">Java JScrollBar</a>
+<a href="java-jmenuitem-and-jmenu.html">Java JMenuItem &amp; JMenu</a>
+<a href="java-jpopupmenu.html">Java JPopupMenu</a>
+<a href="java-jseparator.html">Java JSeparator</a>
+<a href="java-jprogressbar.html">Java JProgressBar</a>
+<a href="java-jtree.html">Java JTree</a>
+<a href="java-jcolorchooser.html">Java JColorChooser</a>
+<a href="java-jtabbedpane.html">Java JTabbedPane</a>
+<a href="java-jslider.html">Java JSlider</a>
+<a href="java-jspinner.html">Java JSpinner</a>
+<a href="java-jdialog.html">Java JDialog</a>
+<a href="java-jpanel.html">Java JPanel</a>
+<a href="java-jfilechooser.html">Java JFileChooser</a>
+<a href="java-jlayeredpane.html">Java JLayeredPane</a>
+<a href="how-to-use-tooltip-in-java-swing.html">Using ToolTip</a>
+<a href="how-to-change-titlebar-icon-in-java-awt-swing.html">Change Title Icon</a>
+<a href="how-to-make-an-executable-jar-file-in-java.html">Executable Jar File</a>
+<a href="digital-watch.html" class="l1">Digital Watch</a>
+<a href="Graphics-in-swing.html" class="l1">Graphics in swing</a>
+<a href="Displaying-image-in-swing.html" class="l1">Displaying Image</a>
+</div>
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">Java Swing Apps</span></h2>
+</div>
+<div class="leftmenu" >
+<a href="notepad.html" class="l1">Notepad</a>
+<a href="calculator-in-java.html" class="l1">Calculator</a>
+<a href="ip-finder-in-java.html" class="l1">IP Finder</a>
+<a href="word-count-in-java.html" class="l1">Word Counter</a>
+<a href="url-source-code-generator-in-java.html" class="l1">URL Source Generator</a>
+<a href="folder-explorer-in-java.html" class="l1">Folder Explorer</a>
+<a href="Puzzle-Game.html" class="l1">Puzzle Game</a>
+<a href="Pic-Puzzle-Game.html" class="l1">Pic Puzzle Game</a>
+<a href="tic-tac-toe-game.html" class="l1">Tic Tac Toe Game</a>
+<a href="online-exam-project-in-java-swing-without-database.html" class="l1">Online Exam</a>
+</div>
+
+<div class="leftmenu2">
+<h2 class="spanh2"><span class="spanh2">LayoutManagers</span></h2>
+</div>
+<div class="leftmenu" >
+<a href="java-layout-manager.html" >BorderLayout</a>
+<a href="GridLayout.html" >GridLayout</a>
+<a href="FlowLayout.html" >FlowLayout</a>
+<a href="BoxLayout.html" >BoxLayout</a>
+<a href="CardLayout.html" >CardLayout</a>
+<a href="java-gridbaglayout.html" >GridBagLayout</a>
+<a href="java-grouplayout.html" >GroupLayout</a>
+<a href="java-springlayout.html" >SpringLayout</a>
+<a href="java-scrollpanelayout.html" >ScrollPaneLayout</a>
+</div>
+
+<div class="leftmenu2">
+<a href="java-applet.html"><span>Java Applet</span></a>
+<a href="java-reflection.html"><span>Java Reflection</span></a>
+<a href="java-date.html"><span>Java Date</span></a>
+<a href="java-string-to-int.html"><span>Java Conversion</span></a>
+<a href="collections-in-java.html"><span>Java Collection</span></a>
+<a href="java-jdbc.html"><span>Java JDBC</span></a>
+<a href="New-features-in-java.html" ><span>Java New Features</span></a>
+<a href="RMI.html"><span>RMI</span></a>
+<a href="internationalization-in-java.html"><span>Internationalization</span></a>
+<a href="corejava-interview-questions.html"><span>Interview Questions</span></a>
+</div>
+
+
+<table id="leftad"><tr><td><img src="images/wh.jpg" alt="space"/></td></tr><tr><td>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script> <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="4476401222"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</td></tr></table>
+
+</div><div class="onlycontent">
+
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- CM_JTP_Leaderbaord -->
+<ins class="adsbygoogle cm_jtp_leaderbaord"
+style="display:inline-block"
+data-ad-client="ca-pub-4699858549023382"
+data-ad-slot="9201901915"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div style="margin-left:0px;">
+<div id="city">
+
+<table>
+<tr><td>
+<div id="bottomnextup">
+<a class="next" href="Pic-Puzzle-Game.html">next &rarr;</a>
+<a class="next" href="notepad.html">&larr; prev</a>
+</div>
+
+<h1 class="h1">Puzzle Game in Java</h1>
+<p><strong>Puzzle Game in Java with Source Code:</strong> We can develop Puzzle Game in java with the help of AWT/Swing with event handling. Let's see the code of creating Puzzle Game in java.</p>
+
+<h2 class="h2">Puzzle Game using AWT</h1>
+<img src="images/puzzle_output.png" alt="Puzzle game in AWT"/>
+<div class="codeblock"><textarea name="code" class="java" >
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.JOptionPane;
+public class Puzzle extends Frame implements ActionListener{
+Button b1,b2,b3,b4,b5,b6,b7,b8,b9;
+Puzzle(){
+	super("Puzzle - JavaTpoint");
+	b1=new Button("1");
+	b1.setBounds(50,100,40,40);
+	b2=new Button("2");
+	b2.setBounds(100,100,40,40);
+	b3=new Button("3");
+	b3.setBounds(150,100,40,40);
+	b4=new Button("4");
+	b4.setBounds(50,150,40,40);
+	b5=new Button("5");
+	b5.setBounds(100,150,40,40);
+	b6=new Button("6");
+	b6.setBounds(150,150,40,40);
+	b7=new Button("7");
+	b7.setBounds(50,200,40,40);
+	b8=new Button("");
+	b8.setBounds(100,200,40,40);
+	b9=new Button("8");
+	b9.setBounds(150,200,40,40);
+	
+	b1.addActionListener(this);
+	b2.addActionListener(this);
+	b3.addActionListener(this);
+	b4.addActionListener(this);
+	b5.addActionListener(this);
+	b6.addActionListener(this);
+	b7.addActionListener(this);
+	b8.addActionListener(this);
+	b9.addActionListener(this);
+	
+	add(b1);add(b2);add(b3);add(b4);add(b5);add(b6);add(b7);add(b8);add(b9);
+	setSize(400,400);
+	setLayout(null);
+	setVisible(true);
+}
+public void actionPerformed(ActionEvent e){
+	if(e.getSource()==b1){
+		String label=b1.getLabel();
+		if(b2.getLabel().equals("")){
+			b2.setLabel(label);
+			b1.setLabel("");
+		}
+		if(b4.getLabel().equals("")){
+			b4.setLabel(label);
+			b1.setLabel("");
+		}
+	}
+	if(e.getSource()==b2){
+		String label=b2.getLabel();
+		if(b1.getLabel().equals("")){
+			b1.setLabel(label);
+			b2.setLabel("");
+		}
+		if(b3.getLabel().equals("")){
+			b3.setLabel(label);
+			b2.setLabel("");
+		}
+		if(b5.getLabel().equals("")){
+			b5.setLabel(label);
+			b2.setLabel("");
+		}
+	}
+	if(e.getSource()==b3){
+		String label=b3.getLabel();
+		if(b2.getLabel().equals("")){
+			b2.setLabel(label);
+			b3.setLabel("");
+		}
+		if(b6.getLabel().equals("")){
+			b6.setLabel(label);
+			b3.setLabel("");
+		}
+	}
+	if(e.getSource()==b4){
+		String label=b4.getLabel();
+		if(b1.getLabel().equals("")){
+			b1.setLabel(label);
+			b4.setLabel("");
+		}
+		if(b7.getLabel().equals("")){
+			b7.setLabel(label);
+			b4.setLabel("");
+		}
+		if(b5.getLabel().equals("")){
+			b5.setLabel(label);
+			b4.setLabel("");
+		}
+	}
+	if(e.getSource()==b5){
+		String label=b5.getLabel();
+		if(b2.getLabel().equals("")){
+			b2.setLabel(label);
+			b5.setLabel("");
+		}
+		if(b6.getLabel().equals("")){
+			b6.setLabel(label);
+			b5.setLabel("");
+		}
+		if(b4.getLabel().equals("")){
+			b4.setLabel(label);
+			b5.setLabel("");
+		}
+		if(b8.getLabel().equals("")){
+			b8.setLabel(label);
+			b5.setLabel("");
+		}
+	}
+	if(e.getSource()==b6){
+		String label=b6.getLabel();
+		if(b9.getLabel().equals("")){
+			b9.setLabel(label);
+			b6.setLabel("");
+		}
+		if(b3.getLabel().equals("")){
+			b3.setLabel(label);
+			b6.setLabel("");
+		}
+		if(b5.getLabel().equals("")){
+			b5.setLabel(label);
+			b6.setLabel("");
+		}
+	}
+	if(e.getSource()==b7){
+		String label=b7.getLabel();
+		if(b4.getLabel().equals("")){
+			b4.setLabel(label);
+			b7.setLabel("");
+		}
+		if(b8.getLabel().equals("")){
+			b8.setLabel(label);
+			b7.setLabel("");
+		}
+	}
+	if(e.getSource()==b8){
+		String label=b8.getLabel();
+		if(b9.getLabel().equals("")){
+			b9.setLabel(label);
+			b8.setLabel("");
+		}
+		if(b7.getLabel().equals("")){
+			b7.setLabel(label);
+			b8.setLabel("");
+		}
+		if(b5.getLabel().equals("")){
+			b5.setLabel(label);
+			b8.setLabel("");
+		}
+	}
+	if(e.getSource()==b9){
+		String label=b9.getLabel();
+		if(b6.getLabel().equals("")){
+			b6.setLabel(label);
+			b9.setLabel("");
+		}
+		if(b8.getLabel().equals("")){
+			b8.setLabel(label);
+			b9.setLabel("");
+		}
+	}
+	
+	//congrats code
+	if(b1.getLabel().equals("1")&&b2.getLabel().equals("2")&&b3.getLabel()  
+			.equals("3")&&b4.getLabel().equals("4")&&b5.getLabel().equals("5")  
+			&&b6.getLabel().equals("6")&&b7.getLabel().equals("7")&&b8.getLabel()  
+			.equals("8")&&b9.getLabel().equals("")){   
+			JOptionPane.showMessageDialog(this,"Congratulations! You won.");  
+	}  
+}
+public static void main(String[] args) {
+	new Puzzle();
+}
+}
+</textarea></div>
+
+<h2 class="h2">Puzzle Game using Swing</h1>
+<img src="images/puzzle.jpg" alt="Puzzle game in swing"/>
+<div class="codeblock"><textarea name="code" class="java" >
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+public class puzzle extends JFrame implements ActionListener{
+JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,next;
+puzzle(){
+super("Puzzle Game - JavaTpoint");
+ b1=new JButton("1");
+ b2=new JButton(" ");
+ b3=new JButton("3");
+ b4=new JButton("4");
+ b5=new JButton("5");
+ b6=new JButton("6");
+ b7=new JButton("7");
+ b8=new JButton("8");
+ b9=new JButton("2");
+ next=new JButton("next");
+
+b1.setBounds(10,30,50,40);
+b2.setBounds(70,30,50,40);
+b3.setBounds(130,30,50,40);
+b4.setBounds(10,80,50,40);
+b5.setBounds(70,80,50,40);
+b6.setBounds(130,80,50,40);
+b7.setBounds(10,130,50,40);
+b8.setBounds(70,130,50,40);
+b9.setBounds(130,130,50,40);
+next.setBounds(70,200,100,40);
+  
+add(b1);add(b2);add(b3);add(b4);add(b5);add(b6);add(b7);add(b8);add(b9); add(next);
+b1.addActionListener(this);
+b2.addActionListener(this);
+b3.addActionListener(this);
+b4.addActionListener(this);
+b5.addActionListener(this);
+b6.addActionListener(this);
+b7.addActionListener(this);
+b8.addActionListener(this);
+b9.addActionListener(this);
+next.addActionListener(this);
+
+next.setBackground(Color.black);
+next.setForeground(Color.green);
+setSize(250,300);
+setLayout(null);
+setVisible(true);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}//end of constructor
+
+public void actionPerformed(ActionEvent e){
+if(e.getSource()==next){
+String s=b4.getLabel();
+b4.setLabel(b9.getLabel());
+b9.setLabel(s);
+s=b1.getLabel();
+b1.setLabel(b5.getLabel());
+b5.setLabel(s);
+s=b2.getLabel();
+b2.setLabel(b7.getLabel());
+b7.setLabel(s);
+}
+if(e.getSource()==b1){
+String s=b1.getLabel();
+if(b2.getLabel().equals(" ")){ b2.setLabel(s); b1.setLabel(" ");}
+else if(b4.getLabel().equals(" ")){ b4.setLabel(s); b1.setLabel(" ");}
+ }//end of if
+
+if(e.getSource()==b3){
+String s=b3.getLabel();
+if(b2.getLabel().equals(" ")){ b2.setLabel(s); b3.setLabel(" ");}
+else if(b6.getLabel().equals(" ")){ b6.setLabel(s); b3.setLabel(" ");}
+ }//end of if
+
+if(e.getSource()==b2){
+String s=b2.getLabel();
+if(b1.getLabel().equals(" ")){ b1.setLabel(s); b2.setLabel(" ");}
+else if(b3.getLabel().equals(" ")){ b3.setLabel(s); b2.setLabel(" ");}
+else if(b5.getLabel().equals(" ")){ b5.setLabel(s); b2.setLabel(" ");}
+ }//end of if
+
+if(e.getSource()==b4){
+String s=b4.getLabel();
+if(b1.getLabel().equals(" ")){ b1.setLabel(s); b4.setLabel(" ");}
+else if(b7.getLabel().equals(" ")){ b7.setLabel(s); b4.setLabel(" ");}
+else if(b5.getLabel().equals(" ")){ b5.setLabel(s); b4.setLabel(" ");}
+ }//end of if
+
+if(e.getSource()==b5){
+String s=b5.getLabel();
+if(b2.getLabel().equals(" ")){ b2.setLabel(s); b5.setLabel(" ");}
+else if(b4.getLabel().equals(" ")){ b4.setLabel(s); b5.setLabel(" ");}
+else if(b6.getLabel().equals(" ")){ b6.setLabel(s); b5.setLabel(" ");}
+else if(b8.getLabel().equals(" ")){ b8.setLabel(s); b5.setLabel(" ");}
+ }//end of if
+
+if(e.getSource()==b6){
+
+String s=b6.getLabel();
+if(b9.getLabel().equals(" ")){ b9.setLabel(s); b6.setLabel(" ");}
+else if(b3.getLabel().equals(" ")){ b3.setLabel(s); b6.setLabel(" ");}
+else if(b5.getLabel().equals(" ")){ b5.setLabel(s); b6.setLabel(" ");}
+
+ }//end of if
+
+if(e.getSource()==b7){
+String s=b7.getLabel();
+if(b4.getLabel().equals(" ")){ b4.setLabel(s); b7.setLabel(" ");}
+else if(b8.getLabel().equals(" ")){ b8.setLabel(s); b7.setLabel(" ");}
+
+ }//end of if
+
+if(e.getSource()==b8){
+String s=b8.getLabel();
+if(b7.getLabel().equals(" ")){ b7.setLabel(s); b8.setLabel(" ");}
+else if(b9.getLabel().equals(" ")){ b9.setLabel(s); b8.setLabel(" ");}
+else if(b5.getLabel().equals(" ")){ b5.setLabel(s); b8.setLabel(" ");}
+
+ }//end of if
+
+if(e.getSource()==b9){
+String s=b9.getLabel();
+if(b6.getLabel().equals(" ")){ b6.setLabel(s); b9.setLabel(" ");}
+else if(b8.getLabel().equals(" ")){ b8.setLabel(s); b9.setLabel(" ");}
+
+if(b1.getLabel().equals("1")&&b2.getLabel().equals("2")&&b3.getLabel()
+.equals("3")&&b4.getLabel().equals("4")&&b5.getLabel().equals("5")
+&&b6.getLabel().equals("6")&&b7.getLabel().equals("7")&&b8.getLabel()
+.equals("8")&&b9.getLabel().equals(" ")){ 
+JOptionPane.showMessageDialog(puzzle.this,"!!!you won!!!");
+}
+ }//end of if
+
+}//end of actionPerformed
+ 
+
+public static void main(String[] args){
+new puzzle();
+}//end of main
+
+}//end of class
+
+</textarea></div>
+
+<div id="download">
+<a href="src/swing/Puzzle.zip">download this example</a>
+</div>
+
+
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="Pic-Puzzle-Game.html">Pic Puzzle Game</a></span>
+</div>
+
+
+<!-- link -->
+<br/><br/>
+<div id="bottomnext">
+<a style="float:left" class="next" href="notepad.html">&larr; prev</a>
+<a style="float:right" class="next" href="Pic-Puzzle-Game.html">next &rarr;</a>
+</div>
+
+<br/><br/>
+
+</td></tr></table>
+</div>
+
+
+
+
+
+<h2 class="h2">Please Share</h2>
+<a rel="nofollow" title="Facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=https://www.javatpoint.com/Puzzle-Game"><img src="images/facebook32.png" alt="facebook"/></a>
+<a rel="nofollow" title="Twitter" target="_blank" href="http://twitter.com/share?url=https://www.javatpoint.com/Puzzle-Game&amp;text=Puzzle%20Game%20in%20Java%20with%20Source%20Code%20-%20javatpoint"><img src="images/twitter32.png" alt="twitter"/></a>
+<a rel="nofollow" title="Google+" target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=https://www.javatpoint.com/Puzzle-Game"><img src="images/google-plus32.png" alt="google plus"/></a>
+<a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/Puzzle-Game&amp;description=Puzzle%20Game%20in%20Java%20with%20Source%20Code%20-%20javatpoint"><img src="images/pinterest32.png" alt="pinterest"/></a>
+<a rel="nofollow" title="Tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=https://www.javatpoint.com/Puzzle-Game"><img src="images/tumblr32.png" alt="tumbler"/></a>
+
+
+
+<!-- latest tutorials start -->
+<h2 class="h2">Latest 4 Tutorials</h2>
+<div class="firsthomecontent">
+
+<a href="mariadb-tutorial.html">
+<div class="homecontent">
+<img src="mariadb/images/mariadb-home.png" alt="MariaDB tutorial"/><span class="homespan">MariaDB</span>
+</div>
+</a>
+
+<a href="ado-net-tutorial.html">
+<div class="homecontent">
+<img src="ado/images/ado-net-home.jpg" alt="ADO.NET tutorial"/><span class="homespan">ADO.NET</span>
+</div>
+</a>
+
+<a href="asp-net-tutorial.html">
+<div class="homecontent">
+<img src="asp/images/asp-net-home.png" alt="ASP.NET tutorial"/><span class="homespan">ASP.NET</span>
+</div>
+</a>
+
+<a href="sql-server-tutorial.html">
+<div class="homecontent">
+<img src="sqlserver/images/sql-server-home.jpg" alt="SQL Server tutorial"/><span class="homespan">SQL Server</span>
+</div>
+</a>
+
+</div>
+
+</div>
+
+
+<br/><div class="mobilemenu" style="clear:both">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- responsivemobilefooter --><ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="8222866318"     data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<div id="right" style="width:15%;float:left;margin-left:10px;margin-top:10px;">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"     style="display:inline-block;width:160px;height:600px"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="3155368314"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script><br/><br/><br/>
+
+
+
+
+</div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"><script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- right1024only --><ins class="adsbygoogle" style="display:inline-block;width:120px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="2180118716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<br/><br/>
+</div>
+
+<div id="footer" style="clear:both;width:100%">
+
+<!--<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#90715c,#523b1f);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Summer Training</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers <strong>Summer Internship Training</strong> on Java, PHP, .Net, Hadoop, Data Analytics, R Programming, SAP, Android, Python, Oracle, Seleninum, Linux, C++ and many more technologies in Delhi/NCR, India. For more visit <a style="color:white" href="http://training.javatpoint.com"><img src="images/linkglobe12.png" alt="javatpoint training"/>training.javatpoint.com</a>
+    <br>
+    Course Fee: &#8377; 6000 Only<br>
+    Duration: 6 Week
+    </p>
+</div>
+-->
+<div style="width:100%;float:center;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Website Development Services</h2>
+    <p style="padding:0px 20px 0px 20px">JavaTpoint (SSS IT Pvt Ltd) provides website development services in affordable cost. We develop websites on WordPress, Core PHP, CakePHP, CodeIgnitor, Open Cart, Servlet-JSP, Struts 2 and Spring technologies. Send us your requirement at hr@javatpoint.com. We will show you a free demo first, then we will proceed further.
+    </p>
+    <table style="width:400px;padding:0px 20px 60px 20px">
+        <tr><td>Personal Blog</td><td>$150 Only</td></tr>
+        <tr><td>School Website</td><td>$200 Only</td></tr>
+        <tr><td>Company Website</td><td>$300 Only</td></tr>
+        <tr><td>Showroom Website</td><td>$300 Only</td></tr>
+        <tr><td>News Portal</td><td>$400 Only</td></tr>
+        <tr><td>E-Commerce Website</td><td>$500 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (PHP)</td><td>$3000 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (Java)</td><td>$18000 Approx</td></tr>
+        
+        <tr><td></td><td></td></tr>
+    </table>
+</div>
+<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at hr@javatpoint.com.
+    <br>
+    Course Fee: &#8377; 2000 Per Student<br>
+    </p>
+</div>
+
+<!--<div class="homebox2">
+<h2>Our Initiatives</h2>
+<marquee behavior="alternate">
+<a rel="nofollow" href="https://www.hindi100.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/javatpoint.png" alt="javatpoint"/>
+<p>Hindi100</p>
+</div>
+</a>
+
+<a rel="nofollow" href="https://www.lyricsia.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/lyrics.png" alt="lyrics"/>
+<p>Lyricsia</p>
+</div>
+</a>
+
+<a rel="nofollow" href="http://www.hindi-typing.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/hindi-typing.png" alt="hindi-typing"/>
+<p>Hindi-Typing</p>
+</div>
+</a>
+</marquee>
+</div>
+-->
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
+<div style="margin-top:5px;text-align:center">
+    <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup>
+    <a target="_blank" href="https://feeds.feedburner.com/javatpointsonoo"><img src="images/social/rss1.png" alt="RSS Feed"/></a>
+    <a target="_blank" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="images/social/mail1.png" alt="Subscribe to Get Email Alerts"/></a>
+    <a target="_blank" href="https://www.facebook.com/javatpoint"><img src="images/social/facebook1.jpg" alt="Facebook Page"/></a>
+    <a target="_blank" rel="author" href="https://plus.google.com/u/0/113973042385691981314/posts"><img src="images/social/google1.png" alt="Google Page"/></a>
+    <a target="_blank" href="https://twitter.com/pagejavatpoint"><img src="images/social/twitter1.png" alt="Twitter Page"/></a>
+    <a target="_blank" href="https://javatpoint.blogspot.com/"><img src="images/social/blog.png" alt="Blog Page"/></a>
+    <!--<a href="#" style="font:bold 18px arial;text-decoration:none;"><sup>&uarr;Top</sup></a>-->
+</div>
+
+<footer class="footer1">
+<div class="column4">
+<h3>Popular Topics</h3>
+<a href="java-tutorial.html">Java Tutorial</a>
+<a href="c-programming-language-tutorial.html">C Tutorial</a>
+<a href="cpp-tutorial.html">C++ Tutorial</a>
+<a href="c-sharp-tutorial.html">C# Tutorial</a>
+<a href="php-tutorial.html">PHP Tutorial</a>
+<a href="html-tutorial.html">HTML Tutorial</a>
+<a href="css-tutorial.html">CSS Tutorial</a>
+<a href="javascript-tutorial.html">JavaScript Tutorial</a>
+<a href="jquery-tutorial.html">jQuery Tutorial</a>
+<a href="spring-tutorial.html">Spring Tutorial</a>
+</div>
+<div class="column4">
+<h3>Our Websites</h3>
+<a rel="nofollow" target="_blank" href="index.html">Javatpoint.com</a>
+<a rel="nofollow" target="_blank" href="https://www.hindi100.com/">Hindi100.com</a>
+<a rel="nofollow" target="_blank" href="https://www.lyricsia.com/">Lyricsia.com</a>
+<a rel="nofollow" target="_blank" href="https://www.quoteperson.com/">Quoteperson.com</a>
+<a rel="nofollow" target="_blank" href="http://www.hindi-typing.com/">Hindi-typing.com</a>
+<a rel="nofollow" target="_blank" href="http://www.shayaree.com/">Shayaree.com</a>
+<a rel="nofollow" target="_blank" href="https://www.wordcountee.com/">Wordcountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.charactercountee.com/">Charactercountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.jobandplacement.com/">Jobandplacement.com</a>
+</div>
+<div class="column4">
+<h3>Our Services</h3>
+<p>Website Development</p>
+<p>Android Development</p>
+<p>Website Designing</p>
+<p>Digital Marketing</p>
+<p>Summer Training</p>
+<p>Industrial Training</p>
+<p>College Campus Training</p>
+</div>
+<div class="column4">
+<h3>Contact</h3>
+<p>Address: G-13, 2nd Floor, Sec-3</p>
+<p>Noida, UP, 201301, India</p>
+<p>Contact No: 0120-4256464, 9990449935</p>
+<p>Email: hr@javatpoint.com</p>
+<a href="contact-us.html">Contact Us</a> 
+<a href="subscribe.html">Subscribe Us</a> 
+<a href="privacy-policy.html">Privacy Policy</a>
+
+</div>
+</footer>
+
+<footer class="footer2">
+<p>&copy; Copyright 2011-2017 www.javatpoint.com. All rights reserved.  <a rel="nofollow" target="_blank" href="https://www.sssit.org/">Developed by SSS IT Pvt Ltd (JavaTpoint)</a> </p>
+</footer>
+
+
+</div></div></div>
+<script src="js/shcoreandbrush.js"></script><script type="text/javascript"> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+
+</body> 
+<!-- Mirrored from www.javatpoint.com/Puzzle-Game by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 10:12:12 GMT -->
+</html> 

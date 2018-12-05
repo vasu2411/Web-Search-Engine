@@ -1,0 +1,571 @@
+ <!DOCTYPE html><html lang="en">
+<!-- Mirrored from www.javatpoint.com/R-java-file-in-android by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 09:09:39 GMT -->
+<head><meta charset="utf-8"><title>R.java file in android - javatpoint</title><link rel="SHORTCUT ICON" href="images/logo/icon.png" /><link rel="stylesheet" type="text/css" href="link.css" /><meta name="keywords" content="R.java,file,android, tutorial, examples, fundamentals, UI widgets, Activity and Intent, Fragments, Menu, Service, alarm manager, storage, sqlite, xml, json, multimedia, speech, web service, telephony, animation and graphics"/><meta name="description" content="R.java file in android with examples of Activity and Intent, Fragments, Menu, Service, alarm manager, storage, sqlite, xml, json, multimedia, speech, web service, telephony, animation and graphics"/><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="canonical" href="R-java-file-in-android.html" />
+<meta itemprop="name" content="R.java file in android - javatpoint"><meta itemprop="description" content="R.java file in android with examples of Activity and Intent, Fragments, Menu, Service, alarm manager, storage, sqlite, xml, json, multimedia, speech, web service, telephony, animation and graphics"><meta property="og:title" content="R.java file in android - javatpoint" /><meta property="og:description" content="R.java file in android with examples of Activity and Intent, Fragments, Menu, Service, alarm manager, storage, sqlite, xml, json, multimedia, speech, web service, telephony, animation and graphics" />
+<meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta name="twitter:title" property="og:title" content="R.java file in android - javatpoint" /><meta name="twitter:description" property="og:description" content="R.java file in android with examples of Activity and Intent, Fragments, Menu, Service, alarm manager, storage, sqlite, xml, json, multimedia, speech, web service, telephony, animation and graphics" /><meta property="og:url" content="R-java-file-in-android.html" /><meta property="og:site_name" content="www.javatpoint.com" /><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@pagejavatpoint"/><meta name="twitter:domain" content="www.javatpoint.com"/><meta name="twitter:creator" content="@pagejavatpoint"/></head> 
+<body onload="highlightlink()"> <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679</button>
+<div id="page" style="margin:-8px;background-color:#f5f5f4;"><div id="container"> <div class="header"><!--<p style="font-weight:bold;padding:7px;color:white;background-color:gray;margin:0px"><marquee>JavaTpoint will be down for 2 to 4 hours tonight. Sorry for inconvenience.</marquee></p>-->
+
+<table style="width:100%"><tr><td><div id="headerlink" style="padding:0px;margin:0px"><span style="margin-right:20px;width:45%px"></span><span style="float:right;margin-right:5px;width:45%"> 
+
+</span>
+
+<hr class="upperhr"/>
+</div> </td></tr><tr><td>
+<div style="clear:both;float:left;width:230px;margin-left:20px"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"/></a></div>
+
+<div style="float:left;width:60%;"><form class="navbar-search" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form><!--<span style="margin-left:100px;color:orange;font-size:20px;font-weight:bold;">Happy </span><span style="color:red;font-size:20px;font-weight:bold;">New </span><span style="color:#666600;font-size:20px;font-weight:bold;">Year</span><span style="color:#666600;font-size:30px;font-weight:bold;"> 2015</span>--></div>
+
+</td></tr></table> </div>
+<div class="headermobile">
+<div style="margin-top:10px;padding:0px;text-align:left;">
+<span style="float:left"><input type="image" src="images/menuhome64.png" onclick="showmenu()"/></span>
+<span style="float:left"><a href="index.html"><img src="images/logo/jtp_logo.png" alt="Javatpoint Logo"></a></span>
+</div>
+<div style="margin:0px;padding:0px;clear:both"><form class="navbar-search-m" method="get" action="https://www.google.com/search" target="_blank"> <input type="text" name="q" class="search-query span2-m" placeholder="Search on javatpoint..." title="Search on Javatpoint"/><input type="hidden" name="sitesearch" value="www.javatpoint.com"/></form></div></div>
+<div id="link" style="clear:both"> <div id="smoothmenu1" class="ddsmoothmenu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="java-tutorial.html">Core Java</a></li>
+<li><a href="servlet-tutorial.html">Servlet</a></li>
+<li><a href="jsp-tutorial.html">JSP</a></li>
+<li><a href="struts-2-tutorial.html">Struts2</a></li>
+<li><a href="java-mail-api-tutorial.html">Mail API</a></li>
+<li><a href="hibernate-tutorial.html">Hibernate</a></li>
+<li><a href="spring-tutorial.html">Spring</a></li>
+<li><a href="android-tutorial.html"  class="selected">Android</a></li>
+<li><a href="design-patterns-in-java.html">Design Pattern</a></li>
+<li><a href="examaccess.html">Quiz</a></li>
+<li><a href="free-java-projects.html">Projects</a></li>
+<li><a href="corejava-interview-questions.html">Interview Q</a>
+<li><a href="comment.html">Comment</a>
+<li><a href="forum.html">Forum</a>
+</li>
+</ul>
+<br style="clear: left" />
+</div>
+
+</div><div class="mobilemenu" style="clear:both"> </div>
+
+<div id="menu"><a target="_blank" href="http://training.javatpoint.com/android-training.jsp" class="training">Android Training</a> 
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Tutorial</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-tutorial.html"><span>Android Introduction</span></a>
+<a href="android-what-where-and-why.html" >What is Android</a>
+<a href="android-history-and-versions.html" >History and Version</a>
+<a href="android-software-stack.html" >Android Architecture</a>
+<a href="android-core-building-blocks.html" >Core Building Blocks</a>
+<a href="android-emulator.html" >Android Emulator</a>
+<a href="installing-softwares-for-android.html" >Install Android</a>
+<a href="how-to-setup-android-for-eclipse-ide.html" >Setup Eclipse</a>
+<a href="hello-android-example.html" >Hello Android example</a>
+<a href="internal-details-of-hello-android-example.html" >Internal Details</a>
+<a href="dalvik-virtual-machine.html" >Dalvik VM</a>
+<a href="AndroidManifest-xml-file-in-android.html" >AndroidManifest.xml</a>
+<a href="R-java-file-in-android.html" >R.java</a>
+<a href="android-hide-title-bar-example.html" >Hide Title Bar</a>
+<a href="android-screen-orientation-example.html" >Screen Orientation</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Widgets</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-ui-widgets-tutorial.html">UI Widgets</a>
+<a href="android-working-with-button.html" >Working with Button</a>
+<a href="android-toast-example.html" >Toast</a>
+<a href="android-custom-toast-example.html" >Custom Toast</a>
+<a href="android-togglebutton-example.html" >ToggleButton</a>
+<a href="android-checkbox-example.html" >CheckBox</a>
+<a href="android-alert-dialog-example.html" >AlertDialog</a>
+<a href="android-spinner-example.html" >Spinner</a>
+<a href="android-autocompletetextview-example.html" >AutoCompleteTextView</a>
+<a href="android-rating-bar-example.html" >RatingBar</a>
+<a href="android-webview-example.html" >WebView</a>
+<a href="android-seekbar-example.html" >SeekBar</a>
+<a href="android-datepicker-example.html" >DatePicker</a>
+<a href="android-timepicker-example.html" >TimePicker</a>
+<a href="android-analog-clock-and-digital-clock-example.html" >Analog and Digital</a>
+<a href="android-progressbar-example.html" >ProgressBar</a>
+
+<!--
+<a href="android-edittext-example" >EditText</a>
+<a href="android-multiautocompletetextview-example" >MultiACTV</a>
+<a href="android-imagebutton-example" >ImageButton</a>
+<a href="android-radiobutton-example" >RadioButton</a>
+<a href="android-downloading-image-and-displyaing-using-imageview-example" >Downloading Image</a>
+<a href="android-mapview-example" >MapView</a>
+<a href="understanding-adapters-in-android" >Understanding Adapters</a>
+<a href="android-listview-example" >ListView</a>
+<a href="android-gridview-example" >GridView</a>
+<a href="android-multithreading-example" >Multithreading</a>
+<a href="android-puzzle-game-example" >PuzzleGame</a>
+-->
+</div>
+
+<!--
+<div class="leftmenu2"  >
+<a href="android-layout-managers"><span>Layout Managers</span></a>
+</div>
+
+<div class="leftmenu">
+<a href="android-linearlayout-example" >LinearLayout</a>
+<a href="android-relativelayout-example" >RelativeLayout</a>
+<a href="android-tablelayout-example" >TableLayout</a>
+<a href="android-framelayout-example" >FrameLayout</a>
+<a href="android-gridlayout-example" >GridLayout</a>
+</div>
+-->
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Activity and Intents</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-life-cycle-of-activity.html" >Activity LifeCycle</a>
+<a href="android-intent-tutorial.html" >Implicit Intent</a>
+<a href="android-explicit-intent-example.html" >Explicit Intent</a>
+<a href="android-startactivityforresult-example.html" >StartActivityForResult</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Fragments</span></h2>
+</div>
+<div class="leftmenu"  >
+<a href="android-fragments.html"><span>Android Fragments</span></a>
+</div>
+
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Menu</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-option-menu-example.html" >Option Menu</a>
+<a href="android-context-menu-example.html" >Context Menu</a>
+<a href="android-popup-menu-example.html" >Popup Menu</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Service</span></h2>
+</div>
+<div class="leftmenu"  >
+<a href="android-service-tutorial.html"><span>Android Service</span></a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android AlarmManager</span></h2>
+</div>
+<div class="leftmenu"  >
+<a href="android-alarmmanager.html"><span>Android AlarmManager</span></a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Storage</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-preferences-example.html" >Android Preferences</a>
+<a href="android-internal-storage-example.html" >Internal Storage</a>
+<a href="android-external-storage-example.html" >External Storage</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android SQLite</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-sqlite-tutorial.html" >SQLite Tutorial</a>
+<a href="android-sqlite-example-with-spinner.html" >SQLite Spinner</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">XML and JSON</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-xml-parsing-using-sax-parser.html" >XML Parsing SAX</a>
+<a href="android-xml-parsing-using-dom-parser.html" >XML Parsing DOM</a>
+<a href="android-XMLPullParser-tutorial.html" >XMLPullParser</a>
+<a href="android-json-parsing-tutorial.html" >JSON Parsing</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Multimedia</span></h2>
+</div>
+<div class="leftmenu">
+<a href="playing-audio-in-android-example.html" >MediaPlayer: Audio</a>
+<a href="playing-video-in-android-example.html" >VideoView: Video</a>
+<a href="android-mediarecorder-example.html" >Recording Media</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Speech</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-texttospeech-tutorial.html" >TextToSpeech1</a>
+<a href="android-texttospeech-example.html" >TextToSpeech2</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Telephony</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-telephony-manager-tutorial.html" >TelephonyManager</a>
+<a href="android-call-state-example.html" >Get Call State</a>
+<a href="android-call-state-broadcastreceiver-example.html">Get Call State 2</a>
+<a href="android-simple-caller-talker-example.html">Simple Caller Talker</a>
+<a href="how-to-make-a-phone-call-in-android.html" >Phone Call</a>
+<a href="how-to-send-sms-in-android.html" >Send SMS</a>
+<a href="how-to-send-email-in-android-using-intent.html" >Send Email</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Device</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-bluetooth-tutorial.html" >Bluetooth Tutorial</a>
+<a href="android-bluetooth-list-paired-devices-example.html" >List Paired Devices</a>
+<a href="android-wifi-example.html" >WIFI</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Camera Tutorial</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-camera-tutorial.html" >Camera Tutorial</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Sensor Tutorial</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-sensor-tutorial.html" >Sensor Tutorial</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Graphics</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-simple-graphics-example.html" >Android Graphics</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Animation</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-animation-example.html" >Android Animation</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Web Service</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-web-service.html" >Android Web Service</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Interview</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-interview-questions.html" >Interview Questions</a>
+</div>
+<div class="leftmenu2"  >
+<h2 class="spanh2"><span class="spanh2">Android Quiz</span></h2>
+</div>
+<div class="leftmenu">
+<a href="android-quiz.html" >Android Quiz</a>
+</div>
+
+<table id="leftad"><tr><td><img src="images/wh.jpg" alt="space"/></td></tr><tr><td>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script> <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="4476401222"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+</td></tr></table>
+
+</div><div class="onlycontent">
+
+
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- CM_JTP_Leaderbaord -->
+<ins class="adsbygoogle cm_jtp_leaderbaord"
+style="display:inline-block"
+data-ad-client="ca-pub-4699858549023382"
+data-ad-slot="9201901915"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<div style="margin-left:0px;">
+<div id="city"> 
+<table >
+<tr><td>
+
+<div id="bottomnextup">
+<a class="next" href="android-hide-title-bar-example.html">next &rarr;</a>
+<a class="next" href="AndroidManifest-xml-file-in-android.html">&larr; prev</a>
+</div>
+
+<h1 class="h1">Android R.java file</h1>
+<p><strong>Android R.java</strong> is <em>an auto-generated file by aapt</em> (Android Asset Packaging Tool) that contains resource IDs for all the resources of res/ directory.</p>
+<p>If you create any component in the activity_main.xml file, id for the corresponding component is automatically created in this file. This id can be used in the activity source file to perform any action on the component.</p>
+
+<h4 class="n">Note: If you delete R.jar file, android creates it automatically.</h4>
+
+<p>Let's see the android R.java file. It includes a lot of static nested classes such as menu, id, layout, attr, drawable, string etc.</p>
+<div class="codeblock"><textarea  name="code" class="java">
+/* AUTO-GENERATED FILE.  DO NOT MODIFY.
+ *
+ * This class was automatically generated by the
+ * aapt tool from the resource data it found.  It
+ * should not be modified by hand.
+ */
+
+package com.example.helloandroid;
+
+public final class R {
+    public static final class attr {
+    }
+    public static final class drawable {
+        public static final int ic_launcher=0x7f020000;
+    }
+    public static final class id {
+        public static final int menu_settings=0x7f070000;
+    }
+    public static final class layout {
+        public static final int activity_main=0x7f030000;
+    }
+    public static final class menu {
+        public static final int activity_main=0x7f060000;
+    }
+    public static final class string {
+        public static final int app_name=0x7f040000;
+        public static final int hello_world=0x7f040001;
+        public static final int menu_settings=0x7f040002;
+    }
+    public static final class style {
+        /** 
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
+
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
+
+        Base application theme for API 11+. This theme completely replaces
+        AppBaseTheme from res/values/styles.xml on API 11+ devices.
+    
+ API 11 theme customizations can go here. 
+
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    
+ API 14 theme customizations can go here. 
+         */
+        public static final int AppBaseTheme=0x7f050000;
+        /**  Application theme. 
+ All customizations that are NOT specific to a particular API-level can go here. 
+         */
+        public static final int AppTheme=0x7f050001;
+    }
+}
+</textarea></div>
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<!-- CM_JTP_WTC_Responsive -->
+<ins class="adsbygoogle cm_jtp_wtc_responsive"
+     style="display:inline-block"
+     data-ad-client="ca-pub-4699858549023382"
+     data-ad-slot="6746133113"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<div class="nexttopicdiv">
+<span class="nexttopictext">Next Topic</span><span class="nexttopiclink"><a href="android-hide-title-bar-example.html">Android Hide Title Bar Example</a></span>
+</div>
+
+<!-- link -->
+<br/><br/>
+<div id="bottomnext">
+<a style="float:left" class="next" href="AndroidManifest-xml-file-in-android.html">&larr; prev</a>
+<a style="float:right" class="next" href="android-hide-title-bar-example.html">next &rarr;</a>
+</div>
+
+<br/><br/>
+</td></tr>
+</table>
+</div>
+
+
+<h2 class="h2">Please Share</h2>
+<a rel="nofollow" title="Facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=https://www.javatpoint.com/R-java-file-in-android"><img src="images/facebook32.png" alt="facebook"/></a>
+<a rel="nofollow" title="Twitter" target="_blank" href="http://twitter.com/share?url=https://www.javatpoint.com/R-java-file-in-android&amp;text=R.java%20file%20in%20android%20-%20javatpoint"><img src="images/twitter32.png" alt="twitter"/></a>
+<a rel="nofollow" title="Google+" target="_blank" href="https://plusone.google.com/_/+1/confirm?hl=en&amp;url=https://www.javatpoint.com/R-java-file-in-android"><img src="images/google-plus32.png" alt="google plus"/></a>
+<a rel="nofollow" title="Pinterest" target="_blank" href="https://www.pinterest.com/pin/create/button/?url=https://www.javatpoint.com/R-java-file-in-android&amp;description=R.java%20file%20in%20android%20-%20javatpoint"><img src="images/pinterest32.png" alt="pinterest"/></a>
+<a rel="nofollow" title="Tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=https://www.javatpoint.com/R-java-file-in-android"><img src="images/tumblr32.png" alt="tumbler"/></a>
+
+
+
+<!-- latest tutorials start -->
+<h2 class="h2">Latest 4 Tutorials</h2>
+<div class="firsthomecontent">
+
+<a href="mariadb-tutorial.html">
+<div class="homecontent">
+<img src="mariadb/images/mariadb-home.png" alt="MariaDB tutorial"/><span class="homespan">MariaDB</span>
+</div>
+</a>
+
+<a href="ado-net-tutorial.html">
+<div class="homecontent">
+<img src="ado/images/ado-net-home.jpg" alt="ADO.NET tutorial"/><span class="homespan">ADO.NET</span>
+</div>
+</a>
+
+<a href="asp-net-tutorial.html">
+<div class="homecontent">
+<img src="asp/images/asp-net-home.png" alt="ASP.NET tutorial"/><span class="homespan">ASP.NET</span>
+</div>
+</a>
+
+<a href="sql-server-tutorial.html">
+<div class="homecontent">
+<img src="sqlserver/images/sql-server-home.jpg" alt="SQL Server tutorial"/><span class="homespan">SQL Server</span>
+</div>
+</a>
+
+</div>
+
+</div>
+
+
+<br/><div class="mobilemenu" style="clear:both">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- responsivemobilefooter --><ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="8222866318"     data-ad-format="auto"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div></div>
+<div id="right" style="width:15%;float:left;margin-left:10px;margin-top:10px;">
+<script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+<ins class="adsbygoogle"     style="display:inline-block;width:160px;height:600px"     data-ad-client="ca-pub-4699858549023382"     data-ad-slot="3155368314"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script><br/><br/><br/>
+
+
+
+
+</div>
+<div class="right1024" style="float:left;margin-left:10px;margin-top:120px;"><script async src="../pagead2.googlesyndication.com/pagead/js/f.txt"></script><!-- right1024only --><ins class="adsbygoogle" style="display:inline-block;width:120px;height:600px" data-ad-client="ca-pub-4699858549023382" data-ad-slot="2180118716"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<br/><br/>
+</div>
+
+<div id="footer" style="clear:both;width:100%">
+
+<!--<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#90715c,#523b1f);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Summer Training</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers <strong>Summer Internship Training</strong> on Java, PHP, .Net, Hadoop, Data Analytics, R Programming, SAP, Android, Python, Oracle, Seleninum, Linux, C++ and many more technologies in Delhi/NCR, India. For more visit <a style="color:white" href="http://training.javatpoint.com"><img src="images/linkglobe12.png" alt="javatpoint training"/>training.javatpoint.com</a>
+    <br>
+    Course Fee: &#8377; 6000 Only<br>
+    Duration: 6 Week
+    </p>
+</div>
+-->
+<div style="width:100%;float:center;margin-top:10px;color:white;background-image: linear-gradient(145deg,#52a2fc,#480fcc);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Website Development Services</h2>
+    <p style="padding:0px 20px 0px 20px">JavaTpoint (SSS IT Pvt Ltd) provides website development services in affordable cost. We develop websites on WordPress, Core PHP, CakePHP, CodeIgnitor, Open Cart, Servlet-JSP, Struts 2 and Spring technologies. Send us your requirement at hr@javatpoint.com. We will show you a free demo first, then we will proceed further.
+    </p>
+    <table style="width:400px;padding:0px 20px 60px 20px">
+        <tr><td>Personal Blog</td><td>$150 Only</td></tr>
+        <tr><td>School Website</td><td>$200 Only</td></tr>
+        <tr><td>Company Website</td><td>$300 Only</td></tr>
+        <tr><td>Showroom Website</td><td>$300 Only</td></tr>
+        <tr><td>News Portal</td><td>$400 Only</td></tr>
+        <tr><td>E-Commerce Website</td><td>$500 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (PHP)</td><td>$3000 Only</td></tr>
+        <tr><td>Multivendor E-Commerce (Java)</td><td>$18000 Approx</td></tr>
+        
+        <tr><td></td><td></td></tr>
+    </table>
+</div>
+<div style="width:100%;float:center;margin-top:-20px;color:white;background-image: linear-gradient(145deg,#dc8140,#b16b15);line-height:28px;">
+    <h2 style="padding:60px 0px 0px 20px">Training For College Campus</h2>
+    <p style="padding:0px 20px 60px 20px">JavaTpoint offers college campus training on Core Java, Advance Java, .Net, Android, Hadoop, PHP, Web Technology and Python. Please mail your requirement at hr@javatpoint.com.
+    <br>
+    Course Fee: &#8377; 2000 Per Student<br>
+    </p>
+</div>
+
+<!--<div class="homebox2">
+<h2>Our Initiatives</h2>
+<marquee behavior="alternate">
+<a rel="nofollow" href="https://www.hindi100.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/javatpoint.png" alt="javatpoint"/>
+<p>Hindi100</p>
+</div>
+</a>
+
+<a rel="nofollow" href="https://www.lyricsia.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/lyrics.png" alt="lyrics"/>
+<p>Lyricsia</p>
+</div>
+</a>
+
+<a rel="nofollow" href="http://www.hindi-typing.com">
+<div class="box2">
+<img class="box2img" src="https://www.hindi100.com/resources/images/hindi-typing.png" alt="hindi-typing"/>
+<p>Hindi-Typing</p>
+</div>
+</a>
+</marquee>
+</div>
+-->
+<script type="text/javascript"> var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-24880427-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
+<div style="margin-top:5px;text-align:center">
+    <sup style="font:16px arial;">Like/Subscribe us for latest updates or newsletter </sup>
+    <a target="_blank" href="https://feeds.feedburner.com/javatpointsonoo"><img src="images/social/rss1.png" alt="RSS Feed"/></a>
+    <a target="_blank" href="https://feedburner.google.com/fb/a/mailverify?uri=javatpointsonoo"><img src="images/social/mail1.png" alt="Subscribe to Get Email Alerts"/></a>
+    <a target="_blank" href="https://www.facebook.com/javatpoint"><img src="images/social/facebook1.jpg" alt="Facebook Page"/></a>
+    <a target="_blank" rel="author" href="https://plus.google.com/u/0/113973042385691981314/posts"><img src="images/social/google1.png" alt="Google Page"/></a>
+    <a target="_blank" href="https://twitter.com/pagejavatpoint"><img src="images/social/twitter1.png" alt="Twitter Page"/></a>
+    <a target="_blank" href="https://javatpoint.blogspot.com/"><img src="images/social/blog.png" alt="Blog Page"/></a>
+    <!--<a href="#" style="font:bold 18px arial;text-decoration:none;"><sup>&uarr;Top</sup></a>-->
+</div>
+
+<footer class="footer1">
+<div class="column4">
+<h3>Popular Topics</h3>
+<a href="java-tutorial.html">Java Tutorial</a>
+<a href="c-programming-language-tutorial.html">C Tutorial</a>
+<a href="cpp-tutorial.html">C++ Tutorial</a>
+<a href="c-sharp-tutorial.html">C# Tutorial</a>
+<a href="php-tutorial.html">PHP Tutorial</a>
+<a href="html-tutorial.html">HTML Tutorial</a>
+<a href="css-tutorial.html">CSS Tutorial</a>
+<a href="javascript-tutorial.html">JavaScript Tutorial</a>
+<a href="jquery-tutorial.html">jQuery Tutorial</a>
+<a href="spring-tutorial.html">Spring Tutorial</a>
+</div>
+<div class="column4">
+<h3>Our Websites</h3>
+<a rel="nofollow" target="_blank" href="index.html">Javatpoint.com</a>
+<a rel="nofollow" target="_blank" href="https://www.hindi100.com/">Hindi100.com</a>
+<a rel="nofollow" target="_blank" href="https://www.lyricsia.com/">Lyricsia.com</a>
+<a rel="nofollow" target="_blank" href="https://www.quoteperson.com/">Quoteperson.com</a>
+<a rel="nofollow" target="_blank" href="http://www.hindi-typing.com/">Hindi-typing.com</a>
+<a rel="nofollow" target="_blank" href="http://www.shayaree.com/">Shayaree.com</a>
+<a rel="nofollow" target="_blank" href="https://www.wordcountee.com/">Wordcountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.charactercountee.com/">Charactercountee.com</a>
+<a rel="nofollow" target="_blank" href="https://www.jobandplacement.com/">Jobandplacement.com</a>
+</div>
+<div class="column4">
+<h3>Our Services</h3>
+<p>Website Development</p>
+<p>Android Development</p>
+<p>Website Designing</p>
+<p>Digital Marketing</p>
+<p>Summer Training</p>
+<p>Industrial Training</p>
+<p>College Campus Training</p>
+</div>
+<div class="column4">
+<h3>Contact</h3>
+<p>Address: G-13, 2nd Floor, Sec-3</p>
+<p>Noida, UP, 201301, India</p>
+<p>Contact No: 0120-4256464, 9990449935</p>
+<p>Email: hr@javatpoint.com</p>
+<a href="contact-us.html">Contact Us</a> 
+<a href="subscribe.html">Subscribe Us</a> 
+<a href="privacy-policy.html">Privacy Policy</a>
+
+</div>
+</footer>
+
+<footer class="footer2">
+<p>&copy; Copyright 2011-2017 www.javatpoint.com. All rights reserved.  <a rel="nofollow" target="_blank" href="https://www.sssit.org/">Developed by SSS IT Pvt Ltd (JavaTpoint)</a> </p>
+</footer>
+
+
+</div></div></div>
+<script src="js/shcoreandbrush.js"></script><script type="text/javascript"> dp.SyntaxHighlighter.HighlightAll('code'); </script>
+
+</body> 
+<!-- Mirrored from www.javatpoint.com/R-java-file-in-android by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 11 Aug 2017 09:09:39 GMT -->
+</html> 
